@@ -3,28 +3,38 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7ebde;
+    color: #421e02;
 }
 header {
-    background: linear-gradient(to right, #e2771a, #f5a623, #fdcf8a);
+    background: linear-gradient(to right, #6c3912, #a36638, #d6996a);
     color: white;
     padding: 1rem;
     text-align: center;
 }
 nav {
     display: flex;
-    justify-content: center;
-    background-color: #fdfcc6;
-    padding: 0.5rem;
     flex-wrap: wrap;
+    justify-content: center;
+    position: sticky; /* Hace que el nav se quede fijo al llegar al top */
+    top: 0;           /* Cuando llegue al top, se quedará pegado */
+    background-color: #fdfcc6;
+    width: 100%;
+    z-index: 1000;    /* Asegura que el menú esté por encima de otros elementos */
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
 }
 nav a {
     margin: .2rem 1rem;
     text-decoration: none;
-    color: #1d3557;
+    color: #d6996a;
     font-weight: bold;
+    padding: 5px 15px;
+    display: inline-block;
 }
 nav a:hover{
-    color: #e2771a;
+    color: #3d2512;
+    background-color: #f39c12;
+    border-radius: 5px;
 }
 section {
     padding: 0 2rem;
@@ -34,10 +44,11 @@ h2{
 }
 .menu{
     margin: 1rem;
-    padding: 0;
+    padding: 2%;
     border: 2px #1d3557 solid;
     border-radius: 40px 0;
     background-color: white;
+    box-shadow: 12px 12px 20px 0px #6c3912;
 }
 .menu, .promociones, .joyeria {
     margin-bottom: 2rem;
@@ -66,8 +77,7 @@ h2{
     border-radius: 40%;
 }
 .img:hover{
-    width: 250px;
-    /* height: 300px; */
+    border-radius: 10px;
 }
 .menu h5{
     margin: 0 5px;
@@ -96,6 +106,28 @@ iframe {
     padding: 5%;
     text-align: center;
     background-color: #f5c6a5;
+}
+.joyeria{
+    text-align: center;
+}
+.joyeria h5{
+    font-size: 1.2rem;
+}
+.joyeria-articulos{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.joyeria-articulos .img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.joyeria-articulos .img:hover{
+    width: 150px;
+    height: 150px;
 }
 strong {
     font-size: 1.3em;
