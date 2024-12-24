@@ -96,7 +96,7 @@
             </div>
             <div>
                 <h5>Panque de Manzana</h5>
-                <div class="img" style="background-image: url('/img/panquedemanzana.jpg');"></div>
+                <div class="img" style="background-image: url('img/panquedemanzana.jpg');"></div>
             </div>
         </div>
         
@@ -115,10 +115,78 @@
                 <div class="img" style="background-image: url('img/crepadeduraznoconchocolate.jpg');"></div>
             </div>
             <div>
-                <h5>Durazno con lechera/chocolate o chispas de chocolate</h5>
+                <h5>Durazno con lechera, chocolate y chispas</h5>
                 <div class="img" style="background-image: url('img/duraznoconlecherachocolateychispasdechocolate.jpg');"></div>
             </div>
         </div>
+
+        <section id="crepas" class="crepas">
+            <h2>¡Personaliza tu Crepa!</h2>
+            <form id="crepa-form">
+                <!-- Selección de Tipo de Crepa -->
+                <div class="crepa-option">
+                    <h3>1. Elige tu tipo de crepa:</h3>
+                    <select name="tipo-crepa" id="tipo-crepa" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Integral">Integral</option>
+                        <!-- <option value="chocolate">De chocolate</option> -->
+                    </select>
+                </div>
+        
+                <!-- Selección de Sabor Base -->
+                <div class="crepa-option">
+                    <h3>2. Elige tu sabor base:</h3>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Queso Filadelfia"> Queso Filadelfia
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Nutella"> Nutella
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Lechera"> Lechera
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Cajeta"> Cajeta
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Mermelada"> Mermelada
+                    </label>
+                </div>
+
+                <!-- Selección de Relleno -->
+                <div class="crepa-option">
+                    <h3>3. Elige tus relleno:</h3>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Platano"> Platano
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Durazno"> Durazno
+                    </label>
+                    <label>
+                        <input type="checkbox" name="relleno" value="Fresa"> Fresa
+                    </label>
+                </div>
+                <!-- Selección de Toppings -->
+                <div class="crepa-option">
+                    <h3>3. Elige tus toppings:</h3>
+                    <label>
+                        <input type="checkbox" name="topping" value="Chocolate"> Chocolate
+                    </label>
+                    <label>
+                        <input type="checkbox" name="topping" value="Chispas de chocolate"> Chispas de chocolate
+                    </label>
+                    <label>
+                        <input type="checkbox" name="topping" value="Chispas confeti"> Chispas confeti
+                    </label>
+                </div>
+                
+                <!-- Botón para enviar -->
+                <button class="submit-button" type="submit" id="send-to-whatsapp">Enviar a WhatsApp</button>
+            </form>
+        </section>
+        
+        
         
         <h3>OTROS</h3>
         <div>
@@ -181,5 +249,6 @@
     <footer>
         <p>&copy; 2024 Pizzas y Crepas. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

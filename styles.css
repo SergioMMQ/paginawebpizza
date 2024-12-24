@@ -67,6 +67,9 @@ h2{
 .menu h5{
     text-transform:uppercase;
     padding: .5rem;
+    width: 200px;
+    height: 40px;
+    align-content: center;
 }
 .img{
     width: 200px;
@@ -133,6 +136,63 @@ strong {
     font-size: 1.3em;
     color: #e74c3c; /* Un color rojo para resaltar el monto */
 }
+
+.crepas {
+    background: linear-gradient(to right, #ffd1a9, #ffb385);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#crepa-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crepa-option{
+    vertical-align: top;
+}
+.crepa-option label{
+    display: flex;
+}
+.crepa-option h3{
+    border: none;
+    height: 50px;
+}
+
+.crepa-option h3 {
+    color: #e8842d;
+    margin-bottom: 10px;
+}
+
+.crepa-option ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.crepa-option ul li {
+    margin: 5px 0;
+}
+
+.submit-button {
+    background-color: #e8842d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+}
+
+.submit-button:hover {
+    background-color: #d6741c;
+}
+
+
 footer p{
     text-align: center;
 }
