@@ -20,7 +20,7 @@ nav {
     background-color: #fdfcc6;
     width: 100%;
     z-index: 1000;    /* Asegura que el menú esté por encima de otros elementos */
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
 }
 nav a {
