@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <h1>Inicio de Sesión</h1>
+  <form id="login-form">
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button type="button" id="login-btn">Iniciar Sesión</button>
+    <button type="button" id="signup-btn">Registrarse</button>
+  </form>
+  <div id="message"></div>
+
+  <script type="module">
+    // Importar Firebase y sus funciones necesarias
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+    // Configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBV9-eyuQVff79BJmsYtPLl2SRKhXeyUZw",
+      authDomain: "pizas-mushu-y-crepas-bella.firebaseapp.com",
+      projectId: "pizas-mushu-y-crepas-bella",
+      storageBucket: "pizas-mushu-y-crepas-bella.firebasestorage.app",
+      messagingSenderId: "1045755902097",
+      appId: "1:1045755902097:web:4a835fe205940d8f316730",
+      measurementId: "G-L5DC3FSV8Y"
+    };
+
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Obtener referencias a los elementos del DOM
+    const loginBtn = document.getElementById('login-btn');
+    const signupBtn = document.getElementById('signup-btn');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const messageDiv = document.getElementById('message');
+
+    // Función para mostrar mensajes
+    const showMessage = (message, isError = false) => {
+      messageDiv.textContent = message;
+      messageDiv.style.color = isError ? 'red' : 'green';
+    };
+
+    // Lógica para el botón "Iniciar Sesión"
+    loginBtn.addEventListener('click', () => {
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      // Validar que los campos no estén vacíos
+      if (!email || !password) {
+        showMessage('Por favor, llena todos los campos.', true);
+        return;
+      }
+
+      // Iniciar sesión con Firebase Authentication
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          showMessage(`¡Bienvenido, ${user.email}!`);
+          
+          // Redirigir a index.html
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          showMessage(`Error: ${errorMessage}`, true);
+        });
+    });
+
+    // Lógica para el botón "Registrarse"
+    signupBtn.addEventListener('click', () => {
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      // Validar que los campos no estén vacíos
+      if (!email || !password) {
+        showMessage('Por favor, llena todos los campos.', true);
+        return;
+      }
+
+      // Registrar nuevo usuario con Firebase Authentication
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          showMessage(`Usuario registrado: ${user.email}`);
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          showMessage(`Error: ${errorMessage}`, true);
+        });
+    });
+  </script>
+</body>
+</html>
