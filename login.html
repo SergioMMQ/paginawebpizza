@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <script type="module" src="app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Enlazar el archivo CSS -->
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
-  <h1>Inicio de Sesión</h1>
-  <form id="login-form">
-    <input type="email" id="email" placeholder="Correo electrónico" required>
-    <input type="password" id="password" placeholder="Contraseña" required>
-    <button type="button" id="login-btn">Iniciar Sesión</button>
-    <button type="button" id="signup-btn">Registrarse</button>
-  </form>
+    <div class="form-container">
+    <!-- Sección de Iniciar Sesión -->
+    <div id="login-section">
+        <h1>Iniciar Sesión</h1>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Correo electrónico" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="button" id="login-btn">Iniciar Sesión</button>
+            <p>¿No tienes cuenta? <span id="go-to-signup">Registrarse</span></p>
+        </form>
+    </div>
+
+    <!-- Sección de Registro -->
+    <div id="signup-section" style="display: none;">
+      <h1>Registrarse</h1>
+      <form id="signup-form">
+        <input type="text" id="signup-name" placeholder="Nombre completo" required>
+        <input type="email" id="signup-email" placeholder="Correo electrónico" required>
+        <input type="password" id="signup-password" placeholder="Contraseña" required>
+        <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+        <input type="text" id="signup-phone" placeholder="Número de teléfono" required>
+        <button type="button" id="signup-btn">Registrarse</button>
+        <p>¿Ya tienes cuenta? <span id="go-to-login">Iniciar sesión</span></p>
+      </form>
+    </div>
+  </div>
+
   <div id="message"></div>
 
   <script type="module">
@@ -39,9 +61,19 @@
     // Obtener referencias a los elementos del DOM
     const loginBtn = document.getElementById('login-btn');
     const signupBtn = document.getElementById('signup-btn');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+    const loginEmailInput = document.getElementById('login-email');
+    const loginPasswordInput = document.getElementById('login-password');
+    const signupEmailInput = document.getElementById('signup-email');
+    const signupPasswordInput = document.getElementById('signup-password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const signupNameInput = document.getElementById('signup-name');
+    const signupPhoneInput = document.getElementById('signup-phone');
     const messageDiv = document.getElementById('message');
+
+    const loginSection = document.getElementById('login-section');
+    const signupSection = document.getElementById('signup-section');
+    const goToSignup = document.getElementById('go-to-signup');
+    const goToLogin = document.getElementById('go-to-login');
 
     // Función para mostrar mensajes
     const showMessage = (message, isError = false) => {
@@ -49,10 +81,22 @@
       messageDiv.style.color = isError ? 'red' : 'green';
     };
 
+    // Mostrar la sección de registro y ocultar la de login
+    goToSignup.addEventListener('click', () => {
+      loginSection.style.display = 'none';
+      signupSection.style.display = 'block';
+    });
+
+    // Mostrar la sección de login y ocultar la de registro
+    goToLogin.addEventListener('click', () => {
+      signupSection.style.display = 'none';
+      loginSection.style.display = 'block';
+    });
+
     // Lógica para el botón "Iniciar Sesión"
     loginBtn.addEventListener('click', () => {
-      const email = emailInput.value;
-      const password = passwordInput.value;
+      const email = loginEmailInput.value;
+      const password = loginPasswordInput.value;
 
       // Validar que los campos no estén vacíos
       if (!email || !password) {
@@ -77,12 +121,21 @@
 
     // Lógica para el botón "Registrarse"
     signupBtn.addEventListener('click', () => {
-      const email = emailInput.value;
-      const password = passwordInput.value;
+      const email = signupEmailInput.value;
+      const password = signupPasswordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+      const name = signupNameInput.value;
+      const phone = signupPhoneInput.value;
 
       // Validar que los campos no estén vacíos
-      if (!email || !password) {
+      if (!email || !password || !confirmPassword || !name || !phone) {
         showMessage('Por favor, llena todos los campos.', true);
+        return;
+      }
+
+      // Validar que las contraseñas coincidan
+      if (password !== confirmPassword) {
+        showMessage('Las contraseñas no coinciden.', true);
         return;
       }
 
