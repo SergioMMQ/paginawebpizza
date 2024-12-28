@@ -2,12 +2,19 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f4f8;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+header{
+  text-align: center;
+  /* margin: 15%; */
 }
   
 /* Contenedor del formulario */
@@ -67,7 +74,7 @@ h1 {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #d6996a;
   }
   
   /* Estilo para los enlaces de cambio de sección */
