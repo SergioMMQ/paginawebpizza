@@ -2,14 +2,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7ebde;
+    background-color: #cbddd1;
     color: #421e02;
 }
 header {
-    background: linear-gradient(to right, #6c3912, #a36638, #d6996a);
+    background: linear-gradient(to right, #ffd0a7, #ffa556, #f38626);
     color: white;
     padding: 1rem;
     text-align: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img-icon{
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
 }
 .espacio{
     padding-top: 40px;
