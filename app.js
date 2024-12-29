@@ -52,3 +52,4 @@ signupBtn.addEventListener('click', () => {
       showMessage(`Error: ${errorMessage}`, true);
     });
 });
+

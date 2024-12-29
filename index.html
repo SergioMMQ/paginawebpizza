@@ -43,8 +43,16 @@
         <div id="user-info" class="info-usuario">
             <!-- Aquí se mostrará la información del usuario -->
         </div>
-        <button id="logout-btn">Cerrar Sesión</button>
+        <button id="logout-btn" class="logout-btn">Cerrar Sesión</button>
+        <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button>
+
     </nav>
+    <script>
+        function goToLogin() {
+          // Redirige a la página login.html
+          window.location.href = "login.html";
+        }
+      </script>
     <div id="promociones" class="espacio"></div>
     <h2>PROMOCIONES</h2>
     <section class="promociones">
@@ -260,7 +268,8 @@
     </section>
     <a href="https://wa.me/522474710267" class="whatsapp-float" target="_blank">
         <img src="img/whatsapp.png" alt="WhatsApp">
-    </a>      
+    </a>
+
     <footer>
         <p>&copy; 2024 Pizzas y Crepas. Todos los derechos reservados.</p>
     </footer>
@@ -288,15 +297,22 @@
         // Referencias a los elementos del DOM
         const userInfoDiv = document.getElementById('user-info');
         const logoutBtn = document.getElementById('logout-btn');
+        const loginButton = document.getElementById('login-button');
 
         // Verificar el estado de autenticación del usuario
         onAuthStateChanged(auth, (user) => {
         if (user) {
             // Si el usuario está autenticado, mostrar su información
             userInfoDiv.innerHTML = `<p>Usuario: ${user.email}</p>`;
-        } else {
-            // Si no hay un usuario autenticado, redirigir a login.html
-            window.location.href = "login.html";
+            loginButton.style.display = "none"; // Ocultar el botón de iniciar sesión
+            logoutBtn.style.display = "inline-block"; 
+            
+        } 
+        else {
+            // Si no está autenticado, mostrar el botón y ocultar la información del usuario
+            loginButton.style.display = "inline-block";
+            logoutBtn.style.display = "none";
+            userInfoDiv.innerHTML = "";
         }
         });
 
@@ -305,7 +321,7 @@
         signOut(auth)
             .then(() => {
             // Redirigir al login después de cerrar sesión
-            window.location.href = "login.html";
+            window.location.href = "index.html";
             })
             .catch((error) => {
             console.error("Error al cerrar sesión:", error);
