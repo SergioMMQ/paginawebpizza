@@ -207,6 +207,17 @@ strong {
     background-color: #d6741c;
 }
 
+.logout-btn, .login-button{
+    background-color: #e8842d;
+    color: white;
+    /* padding: 5px 10px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* font-size: 16px; */
+    /* margin: auto; */
+}
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
