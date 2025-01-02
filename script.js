@@ -37,3 +37,8 @@ document.getElementById('crepa-form').addEventListener('submit', function(event)
     // Abrir el enlace en una nueva pestaña.
     window.open(url, '_blank');
 });
+
+function goToLogin() {
+    // Redirige a la página login.html
+    window.location.href = "login.html";
+  }

@@ -1,336 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzas Mushu & Crepas Bella</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Disfruta nuestras deliciosas pizzas gourmet y crepas personalizables. ¡Haz tu pedido ahora!">
+    <meta name="description"
+        content="Disfruta nuestras deliciosas pizzas gourmet y crepas personalizables. ¡Haz tu pedido ahora!">
     <meta name="keywords" content="pizzas, crepas, personalizables, gourmet, café, postres">
+    <meta name="author" content="Sergio Martínez Meneses">
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Restaurant",
-          "name": "Pizzas Mushu y Crepas Bella",
-          "image": "https://sergiommq.github.io/paginawebpizza/img/icon.jpg",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Francisco I Madero",
-            "addressLocality": "Benito Juárez",
-            "addressRegion": "Tlaxcala",
-            "postalCode": "90514",
-            "addressCountry": "MX"
-          },
-          "servesCuisine": ["Pizzas", "Crepas", "Café", "Postres"],
-          "telephone": "+52522474710267",
-          "openingHours": "Sa-Su 18:00-23:00",
-          "url": "https://sergiommq.github.io/paginawebpizza/",
-          "menu": "https://sergiommq.github.io/paginawebpizza/menu",
-          "priceRange": "$25 - $50"
-        }
-    </script>          
+            {
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Pizzas Mushu y Crepas Bella",
+              "image": "https://sergiommq.github.io/paginawebpizza/img/icon.jpg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Francisco I Madero",
+                "addressLocality": "Benito Juárez",
+                "addressRegion": "Tlaxcala",
+                "postalCode": "90514",
+                "addressCountry": "MX"
+              },
+              "servesCuisine": ["Pizzas", "Crepas", "Café", "Postres"],
+              "telephone": "+52522474710267",
+              "openingHours": "Sa-Su 18:00-23:00",
+              "url": "https://sergiommq.github.io/paginawebpizza/",
+              "menu": "https://sergiommq.github.io/paginawebpizza/menu",
+              "priceRange": "$25 - $50"
+            }
+        </script>
 </head>
+
 <body>
     <header>
-        <div class="img-icon" style="background-image: url('img/icon.jpg');"></div>
-        <div>
-            <h1>Aruma Café</h1>
-            <p>Delicias</p>
+        <div class="header-container">
+            <div class="img-icon" style="background-image: url('img/icon.jpg');" aria-label="Logo del restaurante">
+            </div>
+            <div>
+                <h1>Aruma Café</h1>
+                <p>Delicias para todos los gustos</p>
+            </div>
         </div>
-        <div></div>
     </header>
     <nav>
+        <a href="#promociones">PROMOCIONES</a>
         <a href="#menuu">MENU</a>
         <a href="#ubicacion">UBICACION</a>
-        <a href="#promociones">PROMOCIONES</a>
         <a href="#joyeria">JOYERIA</a>
-        <div id="user-info" class="info-usuario">
-            <!-- Aquí se mostrará la información del usuario -->
-        </div>
-        <button id="logout-btn" class="logout-btn">Cerrar Sesión</button>
+        <div id="user-info" class="info-usuario" aria-live="polite"></div>
+        <button id="logout-btn" class="logout-btn" style="display:none;">Cerrar Sesión</button>
         <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button>
-
     </nav>
-    <script>
-        function goToLogin() {
-          // Redirige a la página login.html
-          window.location.href = "login.html";
-        }
-      </script>
-    <div id="promociones" class="espacio"></div>
-    <h2>PROMOCIONES</h2>
-    <section class="promociones">
-        <div class="cartadepromos">
-            <div class="promo">¡Martes 3x2!</span> en rebanadas de Pizza. </div>
-            <div class="promo">¡Crepa Gratis!</span> por cada compra de <strong>$300</strong> en joyería.</div>
-        </div>
-    </section>
-    <div id="menuu" class="espacio"></div>
-    <h2>MENU</h2>
-    <section class="menu">
-        <h3>CAFE</h3>
-        <div>
-            <div>
-                <h5>Cappuccino</h5>
-                <div class="img" style="background-image: url('img/cafes/cappuccino.jpeg');">
-                </div> 
+    <main>
+        <div id="promociones" class="espacio"></div>
+        <h2>PROMOCIONES</h2>
+        <section class="promociones">
+            <div class="cartadepromos">
+                <div class="promo">¡Martes 3x2!</span> en rebanadas de Pizza. </div>
+                <div class="promo">¡Crepa Gratis!</span> por cada compra de <strong>$300</strong> en joyería.</div>
             </div>
-            <div>
-                <h5>Latte</h5>
-                <div class="img" style="background-image: url('img/cafes/latte.jpeg');">
-                </div>
-            </div>
-            <div>
-                <h5>Latte Vainilla</h5>
-                <div class="img" style="background-image: url('img/cafes/lattevainilla.webp');">
-                </div>
-            </div>
-            <div>
-                <h5>Moka</h5>
-                <div class="img" style="background-image: url('img/cafes/moka.avif');">
-                </div>
-            </div>
-            <div>
-                <h5>Café c/Leche</h5>
-                <div class="img" style="background-image: url('img/cafes/cafecleche.jpeg');">
-                </div>
-            </div>
-        </div>
-        <h3>PIZZAS</h3>
-        <div>
-            <div>
-                <h5>Pepperoni</h5>
-                <div class="img" style="background-image: url('img/pizzas/peperoni.webp');"></div>
-            </div>
-            <div>
-                <h5>Hawaiana</h5>
-                <div class="img" style="background-image: url('img/pizzas/hawaiana.webp');"></div>
-            </div>
-            <!-- <div>
-                <h5>Tres Quesos</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div>
-            <div>
-                <h5>Mexicana</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div> -->
-            <div>
-                <h5>Pepperoni y Hawaiana</h5>
-                <div class="img" style="background-image: url('img/pizzas/peperoniyhawaiana.webp');"></div>
-            </div>
-        </div>
-        <h3>PAN</h3>
-        <div>
-            <!-- <div>
-                <h5>Cheese Cake</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div>
-            <div>
-                <h5>Pan de Elote</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div> -->
-            <div>
-                <h5>Panque de Manzana</h5>
-                <div class="img" style="background-image: url('img/pan/panquedemanzana.webp');"></div>
-            </div>
-        </div>
-        
-        <h3>CREPAS</h3>
-        <div>
-            <div>
-                <h5>Platano con chispas</h5>
-                <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchispas.webp');"></div>
-            </div>
-            <div>
-                <h5>Patano con chocolate</h5>
-                <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchocolate.webp');"></div>
-            </div>
-            <div>
-                <h5>Durazno con chocolate</h5>
-                <div class="img" style="background-image: url('img/crepas/crepadeduraznoconchocolate.webp');"></div>
-            </div>
-            <div>
-                <h5>Durazno con lechera, chocolate y chispas</h5>
-                <div class="img" style="background-image: url('img/crepas/duraznoconlecherachocolateychispasdechocolate.webp');"></div>
-            </div>
-        </div>
-
-        <section id="crepas" class="crepas">
-            <h2>¡Personaliza tu Crepa!</h2>
-            <form id="crepa-form">
-                <!-- Selección de Tipo de Crepa -->
-                <div class="crepa-option">
-                    <h3>1. Elige tu tipo de crepa:</h3>
-                    <select name="tipo-crepa" id="tipo-crepa" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Integral">Integral</option>
-                        <!-- <option value="chocolate">De chocolate</option> -->
-                    </select>
-                </div>
-        
-                <!-- Selección de Sabor Base -->
-                <div class="crepa-option">
-                    <h3>2. Elige tu sabor base:</h3>
-                    <label>
-                        <input type="checkbox" name="sabor-base" value="Queso Philadelphia"> Queso Philadelphia
-                    </label>
-                    <label>
-                        <input type="checkbox" name="sabor-base" value="Nutella"> Nutella
-                    </label>
-                    <label>
-                        <input type="checkbox" name="sabor-base" value="Lechera"> Lechera
-                    </label>
-                    <label>
-                        <input type="checkbox" name="sabor-base" value="Cajeta"> Cajeta
-                    </label>
-                    <label>
-                        <input type="checkbox" name="sabor-base" value="Mermelada"> Mermelada
-                    </label>
-                </div>
-
-                <!-- Selección de Relleno -->
-                <div class="crepa-option">
-                    <h3>3. Elige tus relleno:</h3>
-                    <label>
-                        <input type="checkbox" name="relleno" value="Platano"> Platano
-                    </label>
-                    <label>
-                        <input type="checkbox" name="relleno" value="Durazno"> Durazno
-                    </label>
-                    <label>
-                        <input type="checkbox" name="relleno" value="Fresa"> Fresa
-                    </label>
-                </div>
-                <!-- Selección de Toppings -->
-                <div class="crepa-option">
-                    <h3>4. Elige tus toppings:</h3>
-                    <label>
-                        <input type="checkbox" name="topping" value="Chocolate"> Chocolate
-                    </label>
-                    <label>
-                        <input type="checkbox" name="topping" value="Chispas de chocolate"> Chispas de chocolate
-                    </label>
-                    <label>
-                        <input type="checkbox" name="topping" value="Chispas confeti"> Chispas confeti
-                    </label>
-                </div>
-                
-                <!-- Botón para enviar -->
-                <button class="submit-button" type="submit" id="send-to-whatsapp">Enviar a WhatsApp</button>
-            </form>
         </section>
+        <div id="menuu" class="espacio"></div>
+        <h2>MENU</h2>
+        <section class="menu">
+            <h3>CAFE</h3>
+            <div>
+                <div>
+                    <h5>Cappuccino</h5>
+                    <div class="img" style="background-image: url('img/cafes/cappuccino.jpeg');">
+                    </div>
+                </div>
+                <div>
+                    <h5>Latte</h5>
+                    <div class="img" style="background-image: url('img/cafes/latte.jpeg');">
+                    </div>
+                </div>
+                <div>
+                    <h5>Latte Vainilla</h5>
+                    <div class="img" style="background-image: url('img/cafes/lattevainilla.webp');">
+                    </div>
+                </div>
+                <div>
+                    <h5>Moka</h5>
+                    <div class="img" style="background-image: url('img/cafes/moka.avif');">
+                    </div>
+                </div>
+                <div>
+                    <h5>Café c/Leche</h5>
+                    <div class="img" style="background-image: url('img/cafes/cafecleche.jpeg');">
+                    </div>
+                </div>
+            </div>
+            <h3>PIZZAS</h3>
+            <div>
+                <div>
+                    <h5>Pepperoni</h5>
+                    <div class="img" style="background-image: url('img/pizzas/peperoni.webp');"></div>
+                </div>
+                <div>
+                    <h5>Hawaiana</h5>
+                    <div class="img" style="background-image: url('img/pizzas/hawaiana.webp');"></div>
+                </div>
+                <div>
+                    <h5>Pepperoni y Hawaiana</h5>
+                    <div class="img" style="background-image: url('img/pizzas/peperoniyhawaiana.webp');"></div>
+                </div>
+            </div>
+            <h3>PAN</h3>
+            <div>
+                <div>
+                    <h5>Panque de Manzana</h5>
+                    <div class="img" style="background-image: url('img/pan/panquedemanzana.webp');"></div>
+                </div>
+            </div>
+            <h3>CREPAS</h3>
+            <div>
+                <div>
+                    <h5>Platano con chispas</h5>
+                    <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchispas.webp');"></div>
+                </div>
+                <div>
+                    <h5>Patano con chocolate</h5>
+                    <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchocolate.webp');"></div>
+                </div>
+                <div>
+                    <h5>Durazno con chocolate</h5>
+                    <div class="img" style="background-image: url('img/crepas/crepadeduraznoconchocolate.webp');"></div>
+                </div>
+                <div>
+                    <h5>Durazno con lechera, chocolate y chispas</h5>
+                    <div class="img"
+                        style="background-image: url('img/crepas/duraznoconlecherachocolateychispasdechocolate.webp');">
+                    </div>
+                </div>
+            </div>
 
-        <h3>OTROS</h3>
-        <div>
-            <div>
-                <h5>Malteada de Fresa</h5>
-                <div class="img" style="background-image: url('img/otro/malteadadefresa.webp');"></div>
-            </div>
-            <!-- <div>
-                <h5>Ensaladas</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div>
-            <div>
-                <h5>Molletes</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div>
-            <div>
-                <h5>Jugos</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div>
-            <div>
-                <h5>Cocktel de Frutas</h5>
-                <div class="img" style="background-image: url('');"></div>
-            </div> -->
-        </div>
-    </section>
-    <div id="ubicacion" class="espacio"></div>
-    <h2>DONDE NOS ENCONTRAMOS</h2>
-    <section class="map">
-        <iframe title="Mapa de ubicación de Pizzas y Crepas Mushu" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.913400978961!2d-97.91029242474055!3d19.37290204258454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cffd57ec9a8247%3A0x7d25c571d5cbcf51!2sPizzas%20Mushu%20y%20Crepas%20Bella!5e0!3m2!1ses-419!2smx!4v1734849688389!5m2!1ses-419!2smx" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            Tu navegador no soporta iframes. Visita el <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.913400978961!2d-97.91029242474055!3d19.37290204258454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cffd57ec9a8247%3A0x7d25c571d5cbcf51!2sPizzas%20Mushu%20y%20Crepas%20Bella!5e0!3m2!1ses-419!2smx!4v1734849688389!5m2!1ses-419!2smx">mapa en Google Maps</a>.</iframe>
-    </section>
-    
-    <div id="joyeria" class="espacio"></div>
-    <h2>JOYERIA</h2>
-    <section class="joyeria">
-        <p>Descubre nuestra colección de joyería:</p>
-        <div>
-            <h5>Aretes</h5>
-            <div class="joyeria-articulos">
-                <div class="img" style="background-image: url('img/venta/aretes1.webp');"></div>
-                <div class="img" style="background-image: url('img/venta/aretes2.webp');"></div>
-                <div class="img" style="background-image: url('img/venta/aretes3.jpg');"></div>
-            </div>
-            <h5>Pulseras</h5>
-            <div class="joyeria-articulos">
-                <div class="img" style="background-image: url('img/venta/pulsera1.webp');"></div>
-                <div class="img" style="background-image: url('img/venta/pulsera2.jpg');"></div>
-            </div>
-        </div>
-    </section>
-    <a href="https://wa.me/522474710267" class="whatsapp-float" target="_blank">
-        <img src="img/whatsapp.png" alt="WhatsApp">
-    </a>
+            <section id="crepas" class="crepas">
+                <h2>¡Personaliza tu Crepa!</h2>
+                <form id="crepa-form">
+                    <!-- Selección de Tipo de Crepa -->
+                    <div class="crepa-option">
+                        <h3>1. Elige tu tipo de crepa:</h3>
+                        <select name="tipo-crepa" id="tipo-crepa" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Integral">Integral</option>
+                            <!-- <option value="chocolate">De chocolate</option> -->
+                        </select>
+                    </div>
 
+                    <!-- Selección de Sabor Base -->
+                    <div class="crepa-option">
+                        <h3>2. Elige tu sabor base:</h3>
+                        <label>
+                            <input type="checkbox" name="sabor-base" value="Queso Philadelphia"> Queso Philadelphia
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sabor-base" value="Nutella"> Nutella
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sabor-base" value="Lechera"> Lechera
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sabor-base" value="Cajeta"> Cajeta
+                        </label>
+                        <label>
+                            <input type="checkbox" name="sabor-base" value="Mermelada"> Mermelada
+                        </label>
+                    </div>
+
+                    <!-- Selección de Relleno -->
+                    <div class="crepa-option">
+                        <h3>3. Elige tus relleno:</h3>
+                        <label>
+                            <input type="checkbox" name="relleno" value="Platano"> Platano
+                        </label>
+                        <label>
+                            <input type="checkbox" name="relleno" value="Durazno"> Durazno
+                        </label>
+                        <label>
+                            <input type="checkbox" name="relleno" value="Fresa"> Fresa
+                        </label>
+                    </div>
+                    <!-- Selección de Toppings -->
+                    <div class="crepa-option">
+                        <h3>4. Elige tus toppings:</h3>
+                        <label>
+                            <input type="checkbox" name="topping" value="Chocolate"> Chocolate
+                        </label>
+                        <label>
+                            <input type="checkbox" name="topping" value="Chispas de chocolate"> Chispas de chocolate
+                        </label>
+                        <label>
+                            <input type="checkbox" name="topping" value="Chispas confeti"> Chispas confeti
+                        </label>
+                    </div>
+                    <!-- Botón para enviar -->
+                    <button class="submit-button" type="submit" id="send-to-whatsapp">Enviar a WhatsApp</button>
+                </form>
+            </section>
+
+            <h3>OTROS</h3>
+            <div>
+                <div>
+                    <h5>Malteada de Fresa</h5>
+                    <div class="img" style="background-image: url('img/otro/malteadadefresa.webp');"></div>
+                </div>
+            </div>
+        </section>
+        <div id="ubicacion" class="espacio"></div>
+        <h2>DONDE NOS ENCONTRAMOS</h2>
+        <section class="map">
+            <iframe title="Mapa de ubicación de Pizzas y Crepas Mushu"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.913400978961!2d-97.91029242474055!3d19.37290204258454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cffd57ec9a8247%3A0x7d25c571d5cbcf51!2sPizzas%20Mushu%20y%20Crepas%20Bella!5e0!3m2!1ses-419!2smx!4v1734849688389!5m2!1ses-419!2smx"
+                width="800" height="600" style="border:0;" allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                Tu navegador no soporta iframes. Visita el <a href="https://www.google.com/maps/">mapa en Google
+                    Maps</a>.
+            </iframe>
+        </section>
+        <div id="joyeria" class="espacio"></div>
+        <h2>JOYERIA</h2>
+        <section class="joyeria">
+            <p>Descubre nuestra colección de joyería:</p>
+            <div>
+                <h5>Aretes</h5>
+                <div class="joyeria-articulos">
+                    <div class="img" style="background-image: url('img/venta/aretes1.webp');"></div>
+                    <div class="img" style="background-image: url('img/venta/aretes2.webp');"></div>
+                    <div class="img" style="background-image: url('img/venta/aretes3.jpg');"></div>
+                </div>
+                <h5>Pulseras</h5>
+                <div class="joyeria-articulos">
+                    <div class="img" style="background-image: url('img/venta/pulsera1.webp');"></div>
+                    <div class="img" style="background-image: url('img/venta/pulsera2.jpg');"></div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Pizzas y Crepas. Todos los derechos reservados.</p>
+        <a href="https://wa.me/522474710267" class="whatsapp-float" target="_blank">
+            <img src="img/whatsapp.png" alt="Contactar por WhatsApp">
+        </a>
     </footer>
-    
     <script src="script.js"></script>
-
-    <script type="module">
-        // Importar Firebase y las funciones necesarias
-        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
-
-        // Inicializar Firebase (deberías usar la misma configuración que en login.html)
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-        const firebaseConfig = {
-        apiKey: "AIzaSyBV9-eyuQVff79BJmsYtPLl2SRKhXeyUZw",
-        authDomain: "pizas-mushu-y-crepas-bella.firebaseapp.com",
-        projectId: "pizas-mushu-y-crepas-bella",
-        storageBucket: "pizas-mushu-y-crepas-bella.firebasestorage.app",
-        messagingSenderId: "1045755902097",
-        appId: "1:1045755902097:web:4a835fe205940d8f316730",
-        measurementId: "G-L5DC3FSV8Y"
-        };
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-
-        // Referencias a los elementos del DOM
-        const userInfoDiv = document.getElementById('user-info');
-        const logoutBtn = document.getElementById('logout-btn');
-        const loginButton = document.getElementById('login-button');
-
-        // Verificar el estado de autenticación del usuario
-        onAuthStateChanged(auth, (user) => {
-        if (user) {
-            // Si el usuario está autenticado, mostrar su información
-            userInfoDiv.innerHTML = `<p>Usuario: ${user.email}</p>`;
-            loginButton.style.display = "none"; // Ocultar el botón de iniciar sesión
-            logoutBtn.style.display = "inline-block"; 
-            
-        } 
-        else {
-            // Si no está autenticado, mostrar el botón y ocultar la información del usuario
-            loginButton.style.display = "inline-block";
-            logoutBtn.style.display = "none";
-            userInfoDiv.innerHTML = "";
-        }
-        });
-
-        // Lógica para cerrar sesión
-        logoutBtn.addEventListener('click', () => {
-        signOut(auth)
-            .then(() => {
-            // Redirigir al login después de cerrar sesión
-            window.location.href = "index.html";
-            })
-            .catch((error) => {
-            console.error("Error al cerrar sesión:", error);
-            });
-        });
-    </script>
+    <script type="module" src="firebase-auth.js"></script>
 </body>
+
 </html>
