@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e4d8c9;
+    background-color: #ffeee2;
     color: #421e02;
 }
 header {
-    background: linear-gradient(to right, #ffd0a7, #ffa556, #f38626);
+    background: linear-gradient(to right, #532803, #934807, #532803);
     color: white;
     padding: 1rem;
     text-align: center;
@@ -31,7 +31,7 @@ nav {
     justify-content: center;
     position: sticky; /* Hace que el nav se quede fijo al llegar al top */
     top: 0;           /* Cuando llegue al top, se quedará pegado */
-    background-color: #fdfcc6;
+    background-color: #ffe0b6;
     width: 100%;
     z-index: 1000;    /* Asegura que el menú esté por encima de otros elementos */
     /* padding: 0.5rem; */
@@ -67,28 +67,31 @@ section {
 }
 h2{
     text-align: center;
+    color: #582905;
 }
 .menu{
     margin: 1rem;
     padding: 2%;
-    border: 2px #1d3557 solid;
+    border: 2px #582905 solid;
     border-radius: 40px 0;
     background-color: white;
     box-shadow: 12px 12px 20px 0px #6c3912;
 }
-.menu, .promociones, .joyeria {
-    margin-bottom: 2rem;
-    justify-items: center;
-}
 .menu h3{
+    justify-self: center;
     size: 2rem;
-    width: 120px;
-    border: 1.5px #1d3557 dotted;
+    /* width: 120px; */
     text-align: center;
 }
-.menu div{
-    text-align: center;
-    display: inline-block;
+
+.categoria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.categoria div p{
+    display: flex;
+    justify-content: space-between;
 }
 .menu h5{
     text-transform:uppercase;
@@ -96,6 +99,7 @@ h2{
     width: 200px;
     height: 40px;
     align-content: center;
+    color: #582905;
 }
 .img{
     width: 200px;
@@ -103,7 +107,7 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 40%;
+    border-radius: 10%;
 }
 .img:hover{
     border-radius: 10px;
@@ -134,7 +138,7 @@ iframe {
     margin: 5px;
     padding: 5%;
     text-align: center;
-    background-color: #f5c6a5;
+    background-color: #ffe6c4;
 }
 .joyeria{
     text-align: center;
@@ -234,7 +238,7 @@ strong {
     width: 60px;
     height: 60px;
     top: 80px;
-    right: 20px;
+    right: 30px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50%;

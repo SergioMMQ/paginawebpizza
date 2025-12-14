@@ -40,7 +40,7 @@
             <div class="img-icon" style="background-image: url('img/icon.jpg');" aria-label="Logo del restaurante">
             </div>
             <div>
-                <h1>Aruma Café</h1>
+                <h1>Aruma D" Café</h1>
                 <p>Delicias para todos los gustos</p>
             </div>
         </div>
@@ -49,172 +49,98 @@
         <a href="#promociones">PROMOCIONES</a>
         <a href="#menuu">MENU</a>
         <a href="#ubicacion">UBICACION</a>
-        <a href="#joyeria">JOYERIA</a>
+        <!-- <a href="#joyeria">JOYERIA</a> -->
         <div id="user-info" class="info-usuario" aria-live="polite"></div>
         <button id="logout-btn" class="logout-btn" style="display:none;">Cerrar Sesión</button>
-        <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button>
+        <!-- <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button> -->
     </nav>
     <main>
         <div id="promociones" class="espacio"></div>
         <h2>PROMOCIONES</h2>
         <section class="promociones">
             <div class="cartadepromos">
-                <div class="promo">¡Martes 3x2!</span> en rebanadas de Pizza. </div>
-                <div class="promo">¡Crepa Gratis!</span> por cada compra de <strong>$300</strong> en joyería.</div>
+                <!-- <div class="promo">¡Martes 3x2!</span> en rebanadas de Pizza. </div> -->
+                <!-- <div class="promo">¡Crepa Gratis!</span> por cada compra de <strong>$300</strong> en joyería.</div> -->
             </div>
         </section>
         <div id="menuu" class="espacio"></div>
         <h2>MENU</h2>
         <section class="menu">
-            <h3>CAFE</h3>
-            <div>
-                <div>
-                    <h5>Cappuccino</h5>
-                    <div class="img" style="background-image: url('img/cafes/cappuccino.jpeg');">
-                    </div>
-                </div>
-                <div>
-                    <h5>Latte</h5>
-                    <div class="img" style="background-image: url('img/cafes/latte.jpeg');">
-                    </div>
-                </div>
-                <div>
-                    <h5>Latte Vainilla</h5>
-                    <div class="img" style="background-image: url('img/cafes/lattevainilla.webp');">
-                    </div>
-                </div>
-                <div>
-                    <h5>Moka</h5>
-                    <div class="img" style="background-image: url('img/cafes/moka.avif');">
-                    </div>
-                </div>
-                <div>
-                    <h5>Café c/Leche</h5>
-                    <div class="img" style="background-image: url('img/cafes/cafecleche.jpeg');">
-                    </div>
-                </div>
-            </div>
-            <h3>PIZZAS</h3>
-            <div>
-                <div>
-                    <h5>Pepperoni</h5>
-                    <div class="img" style="background-image: url('img/pizzas/peperoni.webp');"></div>
-                </div>
-                <div>
-                    <h5>Hawaiana</h5>
-                    <div class="img" style="background-image: url('img/pizzas/hawaiana.webp');"></div>
-                </div>
-                <div>
-                    <h5>Pepperoni y Hawaiana</h5>
-                    <div class="img" style="background-image: url('img/pizzas/peperoniyhawaiana.webp');"></div>
-                </div>
-                <div>
-                    <h5>Mexicana</h5>
-                    <div class="img" style="background-image: url('img/pizzas/pizzamexicana.jpg');"></div>
-                </div>
-            </div>
-            <h3>PAN</h3>
-            <div>
-                <div>
-                    <h5>Panque de Manzana</h5>
-                    <div class="img" style="background-image: url('img/pan/panquedemanzana.webp');"></div>
-                </div>
-            </div>
-            <h3>CREPAS</h3>
-            <div>
-                <div>
-                    <h5>Platano con chispas</h5>
-                    <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchispas.webp');"></div>
-                </div>
-                <div>
-                    <h5>Patano con chocolate</h5>
-                    <div class="img" style="background-image: url('img/crepas/crepadeplatanoconchocolate.webp');"></div>
-                </div>
-                <div>
-                    <h5>Durazno con chocolate</h5>
-                    <div class="img" style="background-image: url('img/crepas/crepadeduraznoconchocolate.webp');"></div>
-                </div>
-                <div>
-                    <h5>Durazno con lechera, chocolate y chispas</h5>
-                    <div class="img"
-                        style="background-image: url('img/crepas/duraznoconlecherachocolateychispasdechocolate.webp');">
-                    </div>
-                </div>
-            </div>
 
-            <section id="crepas" class="crepas">
-                <h2>¡Personaliza tu Crepa!</h2>
-                <form id="crepa-form">
-                    <!-- Selección de Tipo de Crepa -->
-                    <div class="crepa-option">
-                        <h3>1. Elige tu tipo de crepa:</h3>
-                        <select name="tipo-crepa" id="tipo-crepa" required>
-                            <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Integral">Integral</option>
-                            <!-- <option value="chocolate">De chocolate</option> -->
-                        </select>
-                    </div>
+            <!-- BEBIDAS -->
+            <!-- <h3>BEBIDAS</h3> -->
+            <section class="categoria">
 
-                    <!-- Selección de Sabor Base -->
-                    <div class="crepa-option">
-                        <h3>2. Elige tu sabor base:</h3>
-                        <label>
-                            <input type="checkbox" name="sabor-base" value="Queso Philadelphia"> Queso Philadelphia
-                        </label>
-                        <label>
-                            <input type="checkbox" name="sabor-base" value="Nutella"> Nutella
-                        </label>
-                        <label>
-                            <input type="checkbox" name="sabor-base" value="Lechera"> Lechera
-                        </label>
-                        <label>
-                            <input type="checkbox" name="sabor-base" value="Cajeta"> Cajeta
-                        </label>
-                        <label>
-                            <input type="checkbox" name="sabor-base" value="Mermelada"> Mermelada
-                        </label>
-                    </div>
+                <div class="bebidas-calientes">
+                    <h4>☕ BEBIDAS CALIENTES</h4>
+                    <p>Americano <span>$20</span></p>
+                    <p>Cappuccino <span>$25</span></p>
+                    <p>Latte <span>$25</span></p>
+                    <p>Latte Vainilla <span>$25</span></p>
+                    <p>Moka <span>$25</span></p>
+                    <p>Café con Leche <span>$25</span></p>
+                    <p>Chocolate Caliente <span>$25</span></p>
 
-                    <!-- Selección de Relleno -->
-                    <div class="crepa-option">
-                        <h3>3. Elige tus relleno:</h3>
-                        <label>
-                            <input type="checkbox" name="relleno" value="Platano"> Platano
-                        </label>
-                        <label>
-                            <input type="checkbox" name="relleno" value="Durazno"> Durazno
-                        </label>
-                        <label>
-                            <input type="checkbox" name="relleno" value="Fresa"> Fresa
-                        </label>
-                    </div>
-                    <!-- Selección de Toppings -->
-                    <div class="crepa-option">
-                        <h3>4. Elige tus toppings:</h3>
-                        <label>
-                            <input type="checkbox" name="topping" value="Chocolate"> Chocolate
-                        </label>
-                        <label>
-                            <input type="checkbox" name="topping" value="Chispas de chocolate"> Chispas de chocolate
-                        </label>
-                        <label>
-                            <input type="checkbox" name="topping" value="Chispas confeti"> Chispas confeti
-                        </label>
-                    </div>
-                    <!-- Botón para enviar -->
-                    <button class="submit-button" type="submit" id="send-to-whatsapp">Enviar a WhatsApp</button>
-                </form>
+                    <p>Crema Irlandesa <span>$25</span></p>
+                    <p>Vainilla <span>$25</span></p>
+                    <p>Avellana <span>$25</span></p>
+                    <p>Caramelo <span>$25</span></p>
+                </div>
+
+                <div class="bebidas-frias">
+                    <h4>🧊 BEBIDAS FRIAS</h4>
+                    <p>Frappé Fresa <span>$30</span></p>
+                    <p>Frappé Nutella <span>$30</span></p>
+                    <p>Frappé Oreo <span>$30</span></p>
+                    <p>Frappé Gansito <span>$30</span></p>
+                    <p>Frappé Moka <span>$30</span></p>
+                </div>
+
+                <div class="otras-bebidas">
+                    <h4>🧃 OTRAS BEBIDAS</h4>
+                    <p>Refresco 250 ml <span>$15</span></p>
+                    <p>Limonada <span>$25</span></p>
+                    <!-- <p>Agua de Sabor <span>$25</span></p> -->
+                </div>
+
+                <div class="malteadas">
+                    <h4>🥤 MALTEADAS</h4>
+                    <p>Malteada de Fresa <span>$30</span></p>
+                    <p>Malteada de Chocolate <span>$30</span></p>
+                    <p>Malteada de Vainilla <span>$30</span></p>
+                </div>
             </section>
 
-            <h3>OTROS</h3>
-            <div>
-                <div>
-                    <h5>Malteada de Fresa</h5>
-                    <div class="img" style="background-image: url('img/otro/malteadadefresa.webp');"></div>
+            <!-- COMIDA -->
+            <section class="categoria">
+                <div class="pizzas">
+                    <h3>🍕 PIZZAS</h3>
+                    <p>Rebanada de Pizza <span>$25</span></p>
+                    <p>Rebanada de Pizza Especial <span>$30</span></p>
+                    <p>Pizza Completa <span>$200</span></p>
+                    <p>Pizza Especial Completa <span>$250</span></p>
                 </div>
-            </div>
+
+                <div class="crepa">
+                    <h3>🥞 CREPAS</h3>
+                    <p>Crepa de Nutella <span>$40</span></p>
+                    <p>Crepa de Philadelphia <span>$40</span></p>
+                    <p>Crepa de Lechera <span>$40</span></p>
+                    <p>Nutella + Fresa <span>$45</span></p>
+                    <p>Philadelphia + Mermelada <span>$45</span></p>
+                    <p>Lechera + Galleta <span>$50</span></p>
+                </div>
+
+                <div class="comida-salada">
+                    <h3>🌯 COMIDA SALADA</h3>
+                    <p>Burrito de Carne Blanca <span>$50</span></p>
+                    <p>Burrito de Carne Enchilada <span>$50</span></p>
+                    <p>Molletes <span>$25</span></p>
+                    <p>Sincronizadas <span>$30</span></p>
+                </div>
+            </section>
         </section>
+
         <div id="ubicacion" class="espacio"></div>
         <h2>DONDE NOS ENCONTRAMOS</h2>
         <section class="map">
@@ -225,24 +151,6 @@
                 Tu navegador no soporta iframes. Visita el <a href="https://www.google.com/maps/">mapa en Google
                     Maps</a>.
             </iframe>
-        </section>
-        <div id="joyeria" class="espacio"></div>
-        <h2>JOYERIA</h2>
-        <section class="joyeria">
-            <p>Descubre nuestra colección de joyería:</p>
-            <div>
-                <h5>Aretes</h5>
-                <div class="joyeria-articulos">
-                    <div class="img" style="background-image: url('img/venta/aretes1.webp');"></div>
-                    <div class="img" style="background-image: url('img/venta/aretes2.webp');"></div>
-                    <div class="img" style="background-image: url('img/venta/aretes3.jpg');"></div>
-                </div>
-                <h5>Pulseras</h5>
-                <div class="joyeria-articulos">
-                    <div class="img" style="background-image: url('img/venta/pulsera1.webp');"></div>
-                    <div class="img" style="background-image: url('img/venta/pulsera2.jpg');"></div>
-                </div>
-            </div>
         </section>
     </main>
     <footer>
