@@ -258,8 +258,35 @@ footer p{
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1020px) {
     h2{
         margin-top: 40PX;
     }
+
+    .slide{
+        width: 140px;
+        height: 140px;
+        position: none;
+        padding-top: 0px;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+}
+
+.slide {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
 }
