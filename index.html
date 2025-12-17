@@ -60,7 +60,6 @@
         <a href="#promociones">PROMOCIONES</a>
         <a href="#menuu">MENU</a>
         <a href="#ubicacion">UBICACION</a>
-        <!-- <a href="#joyeria">JOYERIA</a> -->
         <div id="user-info" class="info-usuario" aria-live="polite"></div>
         <button id="logout-btn" class="logout-btn" style="display:none;">Cerrar Sesión</button>
         <!-- <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button> -->
@@ -71,8 +70,186 @@
         <h2>PROMOCIONES</h2>
         <section class="promociones">
             <div class="cartadepromos">
-                <!-- <div class="promo">¡Martes 3x2!</span> en rebanadas de Pizza. </div> -->
-                <!-- <div class="promo">¡Crepa Gratis!</span> por cada compra de <strong>$300</strong> en joyería.</div> -->
+                <div class="promo-santa">
+                    <div class="promo-info">
+                        <span class="info-icon">i</span>
+                        <div class="info-tooltip">
+                            Esta promoción está sujeta a disponibilidad de insumos y es válida únicamente durante el mes de diciembre de 2025. En caso de no contar con alguno de los productos, no podrá ofrecerse ni sustituirse.
+                        </div>
+                    </div>
+                    <div class="promo-header">
+                        🎄✨ CAPRICHO DE SANTA ✨🎄
+                        <span class="promo-badge">Edición Navideña</span>
+                    </div>
+                    <p class="promo-subtitle">Porque Santa también se da gustos…</p>
+
+                    <ul class="promo-items">
+                        <li>🥞 Dos crepas de Nutella recién hechas</li>
+                        <li style="justify-self: center;">+</li>
+                        <li>☕ Dos chocolates calientes</li>
+                    </ul>
+
+                    <div class="promo-price">
+                        <span>Precio especial</span>
+                        <strong>$117</strong>
+                    </div>
+
+                    <p class="promo-footer">❤️ Comparte el sabor de la Navidad ❤️</p>
+                    </div>
+                    <style>
+                        .promociones {
+                        display: flex;
+                        justify-content: center;
+                        padding: 20px;
+                        }
+
+                        .cartadepromos {
+                        width: 100%;
+                        max-width: 420px;
+                        }
+
+                        .promo-santa {
+                        background: linear-gradient(180deg, #fffaf2, #f6efe5);
+                        border-radius: 18px;
+                        padding: 20px;
+                        box-shadow: 0 15px 40px rgba(0,0,0,.15);
+                        border: 2px solid #d4af37;
+                        font-family: 'Segoe UI', system-ui, sans-serif;
+                        position: relative;
+                        }
+
+                        /* Header */
+                        .promo-header {
+                        background: linear-gradient(90deg, #b11226, #d4af37);
+                        color: white;
+                        font-weight: 900;
+                        text-align: center;
+                        padding: 14px;
+                        border-radius: 14px;
+                        font-size: 1.2rem;
+                        letter-spacing: .5px;
+                        position: relative;
+                        }
+
+                        .promo-badge {
+                        display: block;
+                        font-size: .75rem;
+                        margin-top: 6px;
+                        opacity: .9;
+                        }
+
+                        /* Subtitle */
+                        .promo-subtitle {
+                        text-align: center;
+                        font-style: italic;
+                        margin: 14px 0;
+                        font-weight: 600;
+                        color: #444;
+                        }
+
+                        /* Items */
+                        .promo-items {
+                        list-style: none;
+                        padding: 0;
+                        margin: 14px 0;
+                        }
+
+                        .promo-items li {
+                        background: #ffffff;
+                        margin-bottom: 8px;
+                        padding: 10px 12px;
+                        border-radius: 12px;
+                        font-weight: 600;
+                        box-shadow: inset 0 0 0 1px #eee;
+                        }
+
+                        /* Price */
+                        .promo-price {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: #fff3cd;
+                        border-radius: 12px;
+                        padding: 12px 14px;
+                        margin: 14px 0;
+                        }
+
+                        .promo-price span {
+                        font-size: .85rem;
+                        color: #555;
+                        }
+
+                        /* Footer */
+                        .promo-footer {
+                        text-align: center;
+                        font-weight: 700;
+                        color: #b11226;
+                        margin-top: 10px;
+                        }
+                        .promo-info {
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+}
+
+/* Icono */
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b11226;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+/* Tooltip */
+.info-tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #fff6d6;
+  color: #5a4300;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #f0c36d;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  transform: translateX(-50%) translateY(6px);
+  z-index: 10;
+}
+
+/* Flechita */
+.info-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff6d6 transparent transparent transparent;
+}
+
+/* Hover */
+.promo-info:hover .info-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+                    </style>
             </div>
         </section>
 
