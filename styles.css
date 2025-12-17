@@ -290,3 +290,96 @@ footer p{
 .slide.active {
     opacity: 1;
 }
+
+
+
+.footer-quetzal {
+  background: #ffeee2;
+  color: #444;
+  font-size: 13px;
+  text-align: center;
+  padding: 22px 10px;
+  transition: all 0.6s ease;
+}
+
+/* Contenedor */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BOTÓN QUETZAL (activo al inicio) */
+.footer-btn-quetzal {
+  background: linear-gradient(
+    120deg,
+    #1f7a5a,
+    #4fd1a5,
+    #c0392b,
+    #2c3e50
+  );
+  background-size: 400% 400%;
+  animation: quetzalFlow 6s ease infinite;
+  border: none;
+  color: #fff;
+  padding: 7px 18px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* Hover elegante */
+.footer-btn-quetzal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Texto oculto */
+.footer-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.footer-hidden a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ESTADO ACTIVADO */
+.footer-quetzal.active {
+  color: #fff;
+  background: linear-gradient(
+    120deg,
+    #1f7a5a,
+    #4fd1a5,
+    #c0392b,
+    #2c3e50
+  );
+  background-size: 400% 400%;
+  animation: quetzalFlow 6s ease infinite;
+}
+
+.footer-quetzal.active .footer-hidden {
+  max-height: 80px;
+  opacity: 1;
+}
+
+/* Botón se vuelve neutro */
+.footer-quetzal.active .footer-btn-quetzal {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  animation: none;
+  box-shadow: none;
+}
+
+/* Animación */
+@keyframes quetzalFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

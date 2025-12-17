@@ -66,3 +66,8 @@ Hola, me gustaría pedir una crepa personalizada:
 function goToLogin() {
   window.location.href = "login.html";
 }
+
+
+function toggleQuetzal() {
+  document.getElementById("footerQuetzal").classList.toggle("active");
+}
