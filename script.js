@@ -51,7 +51,7 @@ Hola, me gustaría pedir una crepa personalizada:
 - Toppings: ${toppings.length ? toppings.join(", ") : "Sin toppings"}
       `.trim();
 
-      const numeroWhatsApp = "522474710267";
+      const numeroWhatsApp = "522472574026";
       const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
       window.open(url, "_blank");
