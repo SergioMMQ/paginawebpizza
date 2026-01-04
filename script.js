@@ -71,3 +71,7 @@ function goToLogin() {
 function toggleQuetzal() {
   document.getElementById("footerQuetzal").classList.toggle("active");
 }
+
+  function mpClose() {
+    document.getElementById('mpPop').style.display = 'none';
+  }

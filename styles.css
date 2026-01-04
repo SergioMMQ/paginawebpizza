@@ -405,3 +405,60 @@ footer p{
 }
 
 
+
+
+  .mp-pop {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 320px;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-left: 6px solid #009ee3;
+    padding: 5px;
+    animation: mpFadeIn 0.4s ease;
+  }
+
+  .mp-pop h4 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: #222;
+  }
+
+  .mp-pop p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .mp-pop strong {
+    font-size: .7rem;
+  }
+
+  .mp-pop .mp-icons {
+    margin-top: 8px;
+    font-size: 10px;
+    color: #333;
+  }
+
+  .mp-pop .mp-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+  }
+
+  .mp-pop .mp-close:hover {
+    color: #000;
+  }
+
+  @keyframes mpFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
