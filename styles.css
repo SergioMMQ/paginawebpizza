@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffeee2;
@@ -22,21 +22,54 @@ header {
     background-size: cover;
     border-radius: 50%;
 }
+.img-logo {
+    background-image: url('img/icon.jpg');
+}
 .espacio{
     padding-top: 40px;
 }
 nav {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    position: sticky; /* Hace que el nav se quede fijo al llegar al top */
-    top: 0;           /* Cuando llegue al top, se quedará pegado */
+    position: sticky;
+    top: 0;
     background-color: #ffe0b6;
     width: 100%;
-    z-index: 1000;    /* Asegura que el menú esté por encima de otros elementos */
-    /* padding: 0.5rem; */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #532803;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-width 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-brand:hover {
+    text-decoration: underline;
+}
+
+nav.scrolled .nav-brand {
+    opacity: 1;
+    max-width: 200px;
+    pointer-events: auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 nav a {
     margin: .2rem 1rem;
     text-decoration: none;
@@ -46,21 +79,73 @@ nav a {
     display: inline-block;
 }
 
-nav a:hover{
+nav a:hover,
+nav a.active {
     color: #3d2512;
     background-color: #f39c12;
     border-radius: 5px;
 }
-.info-usuario{
-    margin: .2rem 1rem;
-    text-decoration: none;
-    color: #d65f04;
-    font-weight: bold;
-    padding: 5px 15px;
-    display: inline-block;
+
+/* Botón hamburguesa */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
 }
-.info-usuario p{
-    margin: 0;
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #d65f04;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffe0b6;
+        padding: 6px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 15px;
+        border-top: 1px solid rgba(214, 95, 4, 0.15);
+    }
 }
 section {
     padding: 0 2rem;
@@ -68,6 +153,7 @@ section {
 h2{
     text-align: center;
     color: #582905;
+    margin-top: 40px;
 }
 .menu{
     margin: 1rem;
@@ -79,8 +165,7 @@ h2{
 }
 .menu h3{
     justify-self: center;
-    size: 2rem;
-    /* width: 120px; */
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -94,12 +179,13 @@ h2{
     justify-content: space-between;
 }
 .menu h5{
-    text-transform:uppercase;
+    text-transform: uppercase;
     padding: .5rem;
     width: 200px;
     height: 40px;
     align-content: center;
     color: #582905;
+    margin: 0 5px;
 }
 .img{
     width: 200px;
@@ -111,9 +197,6 @@ h2{
 }
 .img:hover{
     border-radius: 10px;
-}
-.menu h5{
-    margin: 0 5px;
 }
 .map {
     text-align: center;
@@ -129,116 +212,20 @@ iframe {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
-}
-.promo{
-    width: 100px;
-    height: 100px;
-    border: 1px black dotted;
-    margin: 5px;
-    padding: 5%;
-    text-align: center;
-    background-color: #ffe6c4;
-}
-.joyeria{
-    text-align: center;
-}
-.joyeria h5{
-    font-size: 1.2rem;
-}
-.joyeria-articulos{
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.joyeria-articulos .img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-.joyeria-articulos .img:hover{
-    width: 150px;
-    height: 150px;
+    width: 100%;
 }
 strong {
     font-size: 1.3em;
-    color: #e74c3c; /* Un color rojo para resaltar el monto */
+    color: #d65f04;
 }
 
-.crepas {
-    background: linear-gradient(to right, #ffd1a9, #ffb385);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-}
-
-#crepa-form{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.crepa-option{
-    vertical-align: top;
-}
-.crepa-option label{
-    display: flex;
-}
-.crepa-option h3{
-    border: none;
-    height: 50px;
-}
-
-.crepa-option h3 {
-    color: #e8842d;
-    margin-bottom: 10px;
-}
-
-.crepa-option ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.crepa-option ul li {
-    margin: 5px 0;
-}
-
-.submit-button {
-    background-color: #e8842d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: auto;
-}
-
-.submit-button:hover {
-    background-color: #d6741c;
-}
-
-.logout-btn, .login-button{
-    background-color: #e8842d;
-    color: white;
-    /* padding: 5px 10px; */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    /* font-size: 16px; */
-    /* margin: auto; */
-}
 
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    top: 80px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50%;
@@ -253,42 +240,77 @@ strong {
     height: 40px;
     margin-top: 10px;
 }
-.facebook-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    top: 160px;
-    right: 30px;
-    background-color: #1877f2;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
-}
-
-.facebook-float img {
-    width: 40px;
-    height: 40px;
-    margin-top: 10px;
-}
-
 footer p{
     text-align: center;
 }
 
-@media screen and (max-width: 1020px) {
-    h2{
-        margin-top: 40PX;
-    }
+/* ==============================
+   SECCIÓN DE CONTACTO
+============================== */
+.contacto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 40px;
+    background-color: #f5e0c8;
+    gap: 20px;
+}
 
+.contacto-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #421e02;
+    text-align: left;
+}
+
+.contacto-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contacto-info a:hover {
+    text-decoration: underline;
+}
+
+.contacto-redes {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-redes img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.contacto-redes img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .contacto {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
     .slide{
         width: 140px;
         height: 140px;
-        position: none;
-        padding-top: 0px;
+        position: static;
+        padding-top: 0;
     }
+}
+
+.slider-wrapper {
+    width: 180px;
+    height: 200px;
+    align-self: center;
 }
 
 .slider {
@@ -413,7 +435,7 @@ footer p{
     right: 20px;
     z-index: 9999;
     max-width: 320px;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -462,3 +484,224 @@ footer p{
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+
+/* ==============================
+   PROMOCIONES
+============================== */
+.promociones {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.promo-card {
+  background: linear-gradient(180deg, #fffaf2, #f6efe5);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.15);
+  border: 2px solid #d4af37;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.promo-header {
+  background: linear-gradient(90deg, #b11226, #d4af37);
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  position: relative;
+}
+
+.promo-badge {
+  display: block;
+  font-size: .75rem;
+  margin-top: 6px;
+  opacity: .9;
+}
+
+.promo-subtitle {
+  text-align: center;
+  font-style: italic;
+  margin: 14px 0;
+  font-weight: 600;
+  color: #444;
+}
+
+.promo-vigencia {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+  margin: -8px 0 10px;
+}
+
+.promo-items {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+}
+
+.promo-items li {
+  background: #ffffff;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px #eee;
+}
+
+.promo-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff3cd;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+
+.promo-price span {
+  font-size: .85rem;
+  color: #555;
+}
+
+.promo-footer {
+  text-align: center;
+  font-weight: 700;
+  color: #b11226;
+  margin-top: 10px;
+}
+
+.promo-info {
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b11226;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+.info-tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #fff6d6;
+  color: #5a4300;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #f0c36d;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  transform: translateX(-50%) translateY(6px);
+  z-index: 10;
+}
+
+.info-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff6d6 transparent transparent transparent;
+}
+
+.promo-info:hover .info-tooltip,
+.promo-info:focus-within .info-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* === DISEÑO ESCOLAR === */
+.promo-escolar {
+  border: 1.5px solid #1f3a5f;
+  background: #ffffff;
+}
+
+.promo-header-escolar {
+  background: #1f3a5f;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 12px;
+  letter-spacing: .5px;
+}
+
+.promo-escolar .promo-badge {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.promo-escolar .promo-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  margin: 14px 0;
+}
+
+.promo-escolar .promo-items li {
+  background: #f4f6f8;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #1f3a5f;
+}
+
+.promo-escolar .promo-price {
+  background: #eef2f7;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.promo-escolar .promo-price strong {
+  color: #1f3a5f;
+  font-size: 1.6rem;
+}
+
+.promo-escolar .promo-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #1f3a5f;
+  font-weight: 600;
+}
+
+.promo-escolar .info-icon {
+  background: #1f3a5f;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.promo-escolar .info-tooltip {
+  background: #ffffff;
+  border: 1px solid #cfd8e3;
+  color: #333;
+  font-size: 0.75rem;
+}

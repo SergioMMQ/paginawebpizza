@@ -14,18 +14,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D" Aruma Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap">
     <link rel="stylesheet" href="styles.css">
     <meta name="description"
         content="Disfruta nuestras deliciosas pizzas gourmet y crepas personalizables. ¡Haz tu pedido ahora!">
     <meta name="keywords" content="pizzas, crepas, personalizables, gourmet, café, postres">
     <meta name="author" content="Sergio Martínez Meneses">
     <link rel="icon" href="img/icon.jpg" type="image/jpg">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="D&quot; Aruma Café">
+    <meta property="og:description" content="Disfruta nuestras deliciosas pizzas gourmet y crepas personalizables. ¡Haz tu pedido ahora!">
+    <meta property="og:image" content="https://arumacafe.squetzaldigital.com/img/icon.jpg">
+    <meta property="og:url" content="https://arumacafe.squetzaldigital.com/">
+    <meta property="og:locale" content="es_MX">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Restaurant",
-            "name": "Pizzas Mushu y Crepas Bella",
-            "image": "https://http://arumacafe.squetzaldigital.com/img/icon.jpg",
+            "name": "D\" Aruma Café",
+            "image": "https://arumacafe.squetzaldigital.com/img/icon.jpg",
             "address": {
             "@type": "PostalAddress",
             "streetAddress": "Francisco I Madero",
@@ -35,10 +45,10 @@
             "addressCountry": "MX"
             },
             "servesCuisine": ["Pizzas", "Crepas", "Café", "Postres"],
-            "telephone": "+52522472574026",
-            "openingHours": "Sa-Su 18:00-23:00",
-            "url": "https://http://arumacafe.squetzaldigital.com/",
-            "menu": "https://http://arumacafe.squetzaldigital.com/",
+            "telephone": "+522472574026",
+            "openingHours": ["Sa-Su 18:00-22:30", "Th-Fr 16:00-20:00"],
+            "url": "https://arumacafe.squetzaldigital.com/",
+            "menu": "https://arumacafe.squetzaldigital.com/",
             "priceRange": "$25 - $50"
         }
     </script>
@@ -47,7 +57,7 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="img-icon" style="background-image: url('img/icon.jpg');" aria-label="Logo del restaurante">
+            <div class="img-icon img-logo" aria-label="Logo del restaurante">
             </div>
             <div>
                 <h1>D" Aruma Café</h1>
@@ -56,13 +66,17 @@
         </div>
     </header>
 
-    <nav>
-        <a href="#promociones">PROMOCIONES</a>
-        <a href="#menuu">MENU</a>
-        <a href="#ubicacion">UBICACION</a>
-        <div id="user-info" class="info-usuario" aria-live="polite"></div>
-        <button id="logout-btn" class="logout-btn" style="display:none;">Cerrar Sesión</button>
-        <!-- <button id="login-button" class="login-button" onclick="goToLogin()">Iniciar Sesión</button> -->
+    <nav id="mainNav">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="nav-brand">D" Aruma Café</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#menuu">MENÚ</a>
+            <a href="#promociones">PROMOCIONES</a>
+            <a href="#ubicacion">UBICACIÓN</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
     </nav>
 
     <main>
@@ -77,7 +91,7 @@
             <section class="categoria">
 
                 <div class="bebidas-calientes">
-                    <h4>☕ BEBIDAS CALIENTES</h4>
+                    <h3>☕ BEBIDAS CALIENTES</h3>
                     <p>Americano <span>$20</span></p>
                     <p>Cappuccino <span>$25</span></p>
                     <p>Latte <span>$25</span></p>
@@ -91,7 +105,7 @@
                     <p>Avellana <span>$25</span></p>
                     <p>Caramelo <span>$25</span></p>
                 </div>
-                <div style="width: 180px;height: 200px;align-self: center;">
+                <div class="slider-wrapper">
                     <div class="slider">
                         <img src="img/cafes/cafecleche.jpeg" class="slide active" alt="Café con leche">
                         <img src="img/cafes/cappuccino.jpeg" class="slide" alt="Cappuccino">
@@ -100,35 +114,30 @@
                 </div>
 
                 <div class="malteadas">
-                    <h4>🧊 BEBIDAS FRIAS</h4>
+                    <h3>🧊 BEBIDAS FRIAS</h3>
                     <p>Frappé Fresa <span>$30</span></p>
                     <p>Frappé Nutella <span>$30</span></p>
                     <p>Frappé Oreo <span>$30</span></p>
                     <p>Frappé Gansito <span>$30</span></p>
                     <p>Frappé Moka <span>$30</span></p>
 
-                    <h4>🥤 MALTEADAS</h4>
+                    <h3>🥤 MALTEADAS</h3>
                     <p>Malteada de Fresa <span>$30</span></p>
                     <p>Malteada de Chocolate <span>$30</span></p>
                     <p>Malteada de Vainilla <span>$30</span></p>
 
-                    <h4>🧃 OTRAS BEBIDAS</h4>
+                    <h3>🧃 OTRAS BEBIDAS</h3>
                     <p>Refresco 250 ml <span>$15</span></p>
                     <p>Limonada <span>$25</span></p>
                 </div>
 
-                <div style="width: 180px;height: 200px;align-self: center;">
+                <div class="slider-wrapper">
                     <div class="slider">
-                        <img src="img/cafes/lattevainilla.webp" class="slide active" alt="Bebidas">
-                        <img src="img/cafes/moka.avif" class="slide" alt="Bebidas">
-                        <img src="img/otro/malteadadefresa.webp" class="slide" alt="Bebidas">
+                        <img src="img/cafes/lattevainilla.webp" class="slide active" alt="Latte vainilla" loading="lazy">
+                        <img src="img/cafes/moka.avif" class="slide" alt="Moka" loading="lazy">
+                        <img src="img/otro/malteadadefresa.webp" class="slide" alt="Malteada de fresa" loading="lazy">
                     </div>
                 </div>
-                <!-- <div class="slider">
-                    <img src="img/cafes/lattevainilla.webp" class="slide active" alt="Bebidas">
-                    <img src="img/cafes/moka.avif" class="slide" alt="Bebidas">
-                    <img src="img/otro/malteadadefresa.webp" class="slide" alt="Bebidas">
-                </div> -->
 
             </section>
 
@@ -150,21 +159,14 @@
 
                 </div>
 
-                <div style="width: 180px;height: 200px;align-self: center;">
+                <div class="slider-wrapper">
                     <div class="slider">
-                        <img src="img/pizzas/hawaiana.webp" class="slide active" alt="Bebidas">
-                        <img src="img/pizzas/peperoni.webp" class="slide" alt="Bebidas">
-                        <img src="img/pizzas/peperoniyhawaiana.webp" class="slide" alt="Bebidas">
-                        <img src="img/pizzas/pizzamexicana.jpg" class="slide" alt="Bebidas">
+                        <img src="img/pizzas/hawaiana.webp" class="slide active" alt="Pizza hawaiana" loading="lazy">
+                        <img src="img/pizzas/peperoni.webp" class="slide" alt="Pizza peperoni" loading="lazy">
+                        <img src="img/pizzas/peperoniyhawaiana.webp" class="slide" alt="Pizza peperoni y hawaiana" loading="lazy">
+                        <img src="img/pizzas/pizzamexicana.jpg" class="slide" alt="Pizza mexicana" loading="lazy">
                     </div>
                 </div>
-                <!-- <div class="slider">
-                    <img src="img/pizzas/hawaiana.webp" class="slide active" alt="Bebidas">
-                    <img src="img/pizzas/peperoni.webp" class="slide" alt="Bebidas">
-                    <img src="img/pizzas/peperoniyhawaiana.webp" class="slide" alt="Bebidas">
-                    <img src="img/pizzas/pizzamexicana.jpg" class="slide" alt="Bebidas">
-                
-                </div> -->
 
                 <div class="pizzas">
 
@@ -178,23 +180,15 @@
                     <p>Lechera + Galleta <span>$50</span></p>
                 </div>
 
-                <div style="width: 180px;height: 200px;align-self: center;">
+                <div class="slider-wrapper">
                     <div class="slider">
-                        <img src="img/crepas/cajetaconuva.webp" class="slide active" alt="Pizza">
-                        <img src="img/crepas/crepadeduraznoconchocolate.webp" class="slide" alt="Pizza 2">
-                        <img src="img/crepas/crepadeplatanoconchispas.webp" class="slide" alt="Crepa">
-                        <img src="img/crepas/crepadeplatanoconchocolate.webp" class="slide" alt="Crepa">
-                        <img src="img/crepas/duraznoconlecherachocolateychispasdechocolate.webp" class="slide" alt="Crepa">                
+                        <img src="img/crepas/cajetaconuva.webp" class="slide active" alt="Crepa de cajeta con uva" loading="lazy">
+                        <img src="img/crepas/crepadeduraznoconchocolate.webp" class="slide" alt="Crepa de durazno con chocolate" loading="lazy">
+                        <img src="img/crepas/crepadeplatanoconchispas.webp" class="slide" alt="Crepa de plátano con chispas" loading="lazy">
+                        <img src="img/crepas/crepadeplatanoconchocolate.webp" class="slide" alt="Crepa de plátano con chocolate" loading="lazy">
+                        <img src="img/crepas/duraznoconlecherachocolateychispasdechocolate.webp" class="slide" alt="Crepa de durazno con lechera, chocolate y chispas" loading="lazy">
+                    </div>
                 </div>
-                </div>
-                <!-- <div class="slider">
-                    <img src="img/crepas/cajetaconuva.webp" class="slide active" alt="Pizza">
-                    <img src="img/crepas/crepadeduraznoconchocolate.webp" class="slide" alt="Pizza 2">
-                    <img src="img/crepas/crepadeplatanoconchispas.webp" class="slide" alt="Crepa">
-                    <img src="img/crepas/crepadeplatanoconchocolate.webp" class="slide" alt="Crepa">
-                    <img src="img/crepas/duraznoconlecherachocolateychispasdechocolate.webp" class="slide" alt="Crepa">                
-                </div> -->
-
             </section>
         </section>
 
@@ -202,189 +196,10 @@
         <h2>PROMOCIONES</h2>
         <section class="promociones">
             <div class="cartadepromos">
-                <div class="promo-santa">
+
+                <div class="promo-card promo-escolar">
                     <div class="promo-info">
-                        <span class="info-icon">i</span>
-                        <div class="info-tooltip">
-                            Esta promoción está sujeta a disponibilidad de insumos y es válida únicamente durante el mes de diciembre de 2025. En caso de no contar con alguno de los productos, no podrá ofrecerse ni sustituirse.
-                        </div>
-                    </div>
-                    <div class="promo-header">
-                        🎄✨ CAPRICHO DE SANTA ✨🎄
-                        <span class="promo-badge">Edición Navideña</span>
-                    </div>
-                    <p class="promo-subtitle">Porque Santa también se da gustos…</p>
-
-                    <ul class="promo-items">
-                        <li>🥞 Dos crepas de Nutella</li>
-                        <li style="justify-self: center;">+</li>
-                        <li>☕ Dos chocolates calientes</li>
-                    </ul>
-
-                    <div class="promo-price">
-                        <span>Precio especial</span>
-                        <strong>$115</strong>
-                    </div>
-
-                    <p class="promo-footer">❤️ Comparte el sabor de la Navidad ❤️</p>
-                    </div>
-                    <style>
-                        .promociones {
-                        display: flex;
-                        justify-content: center;
-                        padding: 20px;
-                        }
-
-                        .cartadepromos {
-                        width: 100%;
-                        }
-
-                        .promo-santa {
-                        background: linear-gradient(180deg, #fffaf2, #f6efe5);
-                        border-radius: 18px;
-                        padding: 20px;
-                        box-shadow: 0 15px 40px rgba(0,0,0,.15);
-                        border: 2px solid #d4af37;
-                        font-family: 'Segoe UI', system-ui, sans-serif;
-                        position: relative;
-                        }
-
-                        /* Header */
-                        .promo-header {
-                        background: linear-gradient(90deg, #b11226, #d4af37);
-                        color: white;
-                        font-weight: 900;
-                        text-align: center;
-                        padding: 14px;
-                        border-radius: 14px;
-                        font-size: 1.2rem;
-                        letter-spacing: .5px;
-                        position: relative;
-                        }
-
-                        .promo-badge {
-                        display: block;
-                        font-size: .75rem;
-                        margin-top: 6px;
-                        opacity: .9;
-                        }
-
-                        /* Subtitle */
-                        .promo-subtitle {
-                        text-align: center;
-                        font-style: italic;
-                        margin: 14px 0;
-                        font-weight: 600;
-                        color: #444;
-                        }
-
-                        /* Items */
-                        .promo-items {
-                        list-style: none;
-                        padding: 0;
-                        margin: 14px 0;
-                        }
-
-                        .promo-items li {
-                        background: #ffffff;
-                        margin-bottom: 8px;
-                        padding: 10px 12px;
-                        border-radius: 12px;
-                        font-weight: 600;
-                        box-shadow: inset 0 0 0 1px #eee;
-                        }
-
-                        /* Price */
-                        .promo-price {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        background: #fff3cd;
-                        border-radius: 12px;
-                        padding: 12px 14px;
-                        margin: 14px 0;
-                        }
-
-                        .promo-price span {
-                        font-size: .85rem;
-                        color: #555;
-                        }
-
-                        /* Footer */
-                        .promo-footer {
-                        text-align: center;
-                        font-weight: 700;
-                        color: #b11226;
-                        margin-top: 10px;
-                        }
-                        .promo-info {
-                        position: relative;
-                        display: inline-block;
-                        margin: 8px;
-                        }
-
-                        /* Icono */
-                        .info-icon {
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        background: #b11226;
-                        color: #fff;
-                        font-weight: 900;
-                        font-size: 13px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: help;
-                        box-shadow: 0 4px 10px rgba(0,0,0,.2);
-                        }
-
-                        /* Tooltip */
-                        .info-tooltip {
-                        position: absolute;
-                        bottom: 130%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 220px;
-                        background: #fff6d6;
-                        color: #5a4300;
-                        font-size: 0.75rem;
-                        line-height: 1.4;
-                        padding: 10px 12px;
-                        border-radius: 10px;
-                        border: 1px solid #f0c36d;
-                        box-shadow: 0 10px 25px rgba(0,0,0,.25);
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: opacity .2s ease, transform .2s ease;
-                        transform: translateX(-50%) translateY(6px);
-                        z-index: 10;
-                        }
-
-                        /* Flechita */
-                        .info-tooltip::after {
-                        content: "";
-                        position: absolute;
-                        top: 100%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        border-width: 6px;
-                        border-style: solid;
-                        border-color: #fff6d6 transparent transparent transparent;
-                        }
-
-                        /* Hover */
-                        .promo-info:hover .info-tooltip {
-                        opacity: 1;
-                        pointer-events: auto;
-                        transform: translateX(-50%) translateY(0);
-                        }
-
-                    </style>
-
-                <div class="promo-santa promo-escolar">
-                    <div class="promo-info">
-                    <span class="info-icon">i</span>
+                    <button class="info-icon" aria-label="Ver condiciones de la promoción">i</button>
                     <div class="info-tooltip">
                     Promoción válida de lunes a viernes de 2:00 pm a 6:00 pm.
                     Exclusiva para estudiantes con credencial vigente.
@@ -400,6 +215,7 @@
                 <p class="promo-subtitle">
                     Paquete disponible después del horario escolar
                 </p>
+                <p class="promo-vigencia">Válida durante 2026 · Sujeta a disponibilidad de producto</p>
 
                 <ul class="promo-items">
                     <li>Rebanada de pizza peperoni ó hawaiana</li>
@@ -413,83 +229,10 @@
                 </div>
 
                 <p class="promo-footer">
-                    Presentar credencial de estudiante vigente
+                    Presentar credencial de estudiante vigente · Personal e intransferible
                 </p>
                 </div>
 
-                <style>
-                    /* === DISEÑO ESCOLAR FORMAL === */
-.promo-escolar {
-  border: 1.5px solid #1f3a5f;
-  background: #ffffff;
-}
-
-.promo-header-escolar {
-  background: #1f3a5f;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 12px;
-  border-radius: 12px;
-  letter-spacing: .5px;
-}
-
-.promo-escolar .promo-badge {
-  display: block;
-  font-size: 0.75rem;
-  margin-top: 4px;
-  font-weight: 400;
-  opacity: 0.85;
-}
-
-.promo-escolar .promo-subtitle {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #333;
-  margin: 14px 0;
-}
-
-.promo-escolar .promo-items li {
-  background: #f4f6f8;
-  border-radius: 8px;
-  font-weight: 500;
-  color: #1f3a5f;
-}
-
-.promo-escolar .promo-price {
-  background: #eef2f7;
-  border-radius: 10px;
-  padding: 12px;
-}
-
-.promo-escolar .promo-price strong {
-  color: #1f3a5f;
-  font-size: 1.6rem;
-}
-
-.promo-escolar .promo-footer {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #1f3a5f;
-  font-weight: 600;
-}
-
-/* Icono info formal */
-.promo-escolar .info-icon {
-  background: #1f3a5f;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.promo-escolar .info-tooltip {
-  background: #ffffff;
-  border: 1px solid #cfd8e3;
-  color: #333;
-  font-size: 0.75rem;
-}
-
-                </style>
 
             </div>
         </section>
@@ -497,33 +240,46 @@
         <div id="ubicacion" class="espacio"></div>
         <h2>DONDE NOS ENCONTRAMOS</h2>
         <section class="map">
-            <iframe title="Mapa de ubicación de Pizzas y Crepas Mushu"
+            <iframe title="Mapa de ubicación de D&quot; Aruma Café"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.913400978961!2d-97.91029242474055!3d19.37290204258454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cffd57ec9a8247%3A0x7d25c571d5cbcf51!2sPizzas%20Mushu%20y%20Crepas%20Bella!5e0!3m2!1ses-419!2smx!4v1734849688389!5m2!1ses-419!2smx"
                 width="800" height="600" style="border:0;" allowfullscreen loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
                 Tu navegador no soporta iframes. Visita el <a href="https://www.google.com/maps/">mapa en Google Maps</a>.
             </iframe>
         </section>
+        <h2>CONTACTO</h2>
+        <section class="contacto" id="contacto">
+        <div class="contacto-info">
+            <p>📍 Francisco I Madero, Benito Juárez, Tlaxcala</p>
+            <p>📞 <a href="tel:+522472574026">247 257 4026</a></p>
+            <p>🕐 Jue–Vie 4:00–8:00 pm &nbsp;|&nbsp; Sáb–Dom 6:00–10:30 pm</p>
+        </div>
+        <div class="contacto-redes">
+            <a href="https://wa.me/522472574026" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+                <img src="img/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61571181241675" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Pizzas y Crepas. Todos los derechos reservados.</p>
-        <a href="https://wa.me/522472574026" class="whatsapp-float" target="_blank">
+        <p>&copy; 2026 D" Aruma Café. Todos los derechos reservados.</p>
+        <a href="https://wa.me/522472574026" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
             <img src="img/whatsapp.png" alt="Contactar por WhatsApp">
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61571181241675" class="facebook-float" target="_blank">
-            <img src="img/facebook.png" alt="Contactar por Facebook">
-        </a>
     </footer>
-    <footer class="footer-quetzal" id="footerQuetzal">
+    <div class="footer-quetzal" id="footerQuetzal">
   <div class="footer-content">
 
     <span class="footer-text"><b>¿Te gustó este sitio web?</b></span>
 
     <div class="footer-hidden" id="footerHidden">
         Sitio web diseñado y desarrollado por
-        <a href="https://squetzaldigital.com" target="_blank">
-            <h3><b>→ S Quetzal Digital ←</b></h3>
+        <a href="https://squetzaldigital.com" target="_blank" rel="noopener noreferrer">
+            <span style="font-size: 1.1rem; font-weight: 700;">→ S Quetzal Digital ←</span>
         </a>
         cotiza el tuyo hoy mismo.
         <br>
@@ -537,7 +293,7 @@
   <div class="mp-close" onclick="mpClose()">×</div>
   <h4>💳 Aceptamos pagos con tarjeta</h4>
   <p>
-    Crédito y débito con terminal <strong>Mercado Pago</strong>.
+    Crédito y débito.
     <br>
     También hacemos <strong>recargas telefónicas</strong> y <strong>pago de servicios</strong>.
   </p>
@@ -547,11 +303,10 @@
 </div>
 
   </div>
-</footer>
+</div>
 
 
     <script src="script.js"></script>
-    <script type="module" src="firebase-auth.js"></script>
 </body>
 
 </html>

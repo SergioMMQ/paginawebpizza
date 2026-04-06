@@ -1,6 +1,68 @@
-console.log("script.js cargado");
-
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ==============================
+     MENÚ HAMBURGUESA
+  =============================== */
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("open");
+    navLinks.classList.toggle("open");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navToggle.classList.remove("open");
+      navLinks.classList.remove("open");
+    });
+  });
+
+  /* ==============================
+     SCROLL SPY
+  =============================== */
+  const spySections = ["menuu", "promociones", "ubicacion", "contacto"];
+  const navAnchors = navLinks.querySelectorAll("a");
+
+  function updateActiveNav() {
+    const navHeight = document.querySelector("nav").offsetHeight;
+    let current = "menuu";
+
+    spySections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= navHeight + 20) {
+        current = id;
+      }
+    });
+
+    navAnchors.forEach(a => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === `#${current}`) {
+        a.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveNav);
+  updateActiveNav();
+
+  /* ==============================
+     NOMBRE EN NAV AL HACER SCROLL
+  =============================== */
+  const mainNav = document.getElementById("mainNav");
+  const header = document.querySelector("header");
+
+  function updateNavBrand() {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (headerBottom <= 0) {
+      mainNav.classList.add("scrolled");
+    } else {
+      mainNav.classList.remove("scrolled");
+    }
+  }
+
+  window.addEventListener("scroll", updateNavBrand);
+  updateNavBrand();
 
   /* ==============================
      SLIDERS
@@ -59,13 +121,6 @@ Hola, me gustaría pedir una crepa personalizada:
   }
 
 });
-
-/* ==============================
-   FUNCIÓN GLOBAL LOGIN
-================================ */
-function goToLogin() {
-  window.location.href = "login.html";
-}
 
 
 function toggleQuetzal() {
