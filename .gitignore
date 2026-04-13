@@ -1,2 +1,5 @@
-# App (React Native / Expo)
-app/
+# node_modules de la app (manejado por app/.gitignore)
+app/node_modules/
+app/.expo/
+app/dist/
+app/web-build/
