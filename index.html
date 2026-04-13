@@ -83,158 +83,25 @@
 
 
         <div id="menuu" class="espacio"></div>
-        <h2>MENU</h2>
 
-        <section class="menu">
-
-            <!-- BEBIDAS -->
-            <section class="categoria">
-
-                <div class="bebidas-calientes">
-                    <h3>☕ BEBIDAS CALIENTES</h3>
-                    <p>Americano <span>$20</span></p>
-                    <p>Cappuccino <span>$25</span></p>
-                    <p>Latte <span>$25</span></p>
-                    <p>Latte Vainilla <span>$25</span></p>
-                    <p>Moka <span>$25</span></p>
-                    <p>Café con Leche <span>$25</span></p>
-                    <p>Chocolate Caliente <span>$25</span></p>
-
-                    <p>Crema Irlandesa <span>$25</span></p>
-                    <p>Vainilla <span>$25</span></p>
-                    <p>Avellana <span>$25</span></p>
-                    <p>Caramelo <span>$25</span></p>
-                </div>
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img src="img/cafes/cafecleche.jpeg" class="slide active" alt="Café con leche">
-                        <img src="img/cafes/cappuccino.jpeg" class="slide" alt="Cappuccino">
-                        <img src="img/cafes/latte.jpeg" class="slide" alt="Latte">
-                    </div>
-                </div>
-
-                <div class="malteadas">
-                    <h3>🧊 BEBIDAS FRIAS</h3>
-                    <p>Frappé Fresa <span>$30</span></p>
-                    <p>Frappé Nutella <span>$30</span></p>
-                    <p>Frappé Oreo <span>$30</span></p>
-                    <p>Frappé Gansito <span>$30</span></p>
-                    <p>Frappé Moka <span>$30</span></p>
-
-                    <h3>🥤 MALTEADAS</h3>
-                    <p>Malteada de Fresa <span>$30</span></p>
-                    <p>Malteada de Chocolate <span>$30</span></p>
-                    <p>Malteada de Vainilla <span>$30</span></p>
-
-                    <h3>🧃 OTRAS BEBIDAS</h3>
-                    <p>Refresco 250 ml <span>$15</span></p>
-                    <p>Limonada <span>$25</span></p>
-                </div>
-
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img src="img/cafes/lattevainilla.webp" class="slide active" alt="Latte vainilla" loading="lazy">
-                        <img src="img/cafes/moka.avif" class="slide" alt="Moka" loading="lazy">
-                        <img src="img/otro/malteadadefresa.webp" class="slide" alt="Malteada de fresa" loading="lazy">
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- COMIDA -->
-            <section class="categoria">
-                <div class="comida-salada">
-                    
-                    <h3>🍕 PIZZAS</h3>
-                    <p>Rebanada de Pizza <span>$25</span></p>
-                    <p>Rebanada de Pizza Especial <span>$30</span></p>
-                    <p>Pizza Completa <span>$200</span></p>
-                    <p>Pizza Especial Completa <span>$250</span></p>
-
-                    <h3>🌯 COMIDA SALADA</h3>
-                    <p>Molletes <span>$25</span></p>
-                    <p>Sincronizadas <span>$30</span></p>
-                    <p>Burrito de Carne Blanca <span>$50</span></p>
-                    <p>Burrito al Pastor <span>$50</span></p>
-
-                </div>
-
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img src="img/pizzas/hawaiana.webp" class="slide active" alt="Pizza hawaiana" loading="lazy">
-                        <img src="img/pizzas/peperoni.webp" class="slide" alt="Pizza peperoni" loading="lazy">
-                        <img src="img/pizzas/peperoniyhawaiana.webp" class="slide" alt="Pizza peperoni y hawaiana" loading="lazy">
-                        <img src="img/pizzas/pizzamexicana.jpg" class="slide" alt="Pizza mexicana" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="pizzas">
-
-                    <h3>🥞 CREPAS</h3>
-                    <p>Nutella <span>$40</span></p>
-                    <p>Philadelphia <span>$40</span></p>
-                    <p>Lechera <span>$40</span></p>
-                    <p>Philadelphia + Mermelada <span>$45</span></p>
-                    <p>Nutella + Fresa <span>$50</span></p>
-                    <p>Philadelphia + Fruta <span>$50</span></p>
-                    <p>Lechera + Galleta <span>$50</span></p>
-                </div>
-
-                <div class="slider-wrapper">
-                    <div class="slider">
-                        <img src="img/crepas/cajetaconuva.webp" class="slide active" alt="Crepa de cajeta con uva" loading="lazy">
-                        <img src="img/crepas/crepadeduraznoconchocolate.webp" class="slide" alt="Crepa de durazno con chocolate" loading="lazy">
-                        <img src="img/crepas/crepadeplatanoconchispas.webp" class="slide" alt="Crepa de plátano con chispas" loading="lazy">
-                        <img src="img/crepas/crepadeplatanoconchocolate.webp" class="slide" alt="Crepa de plátano con chocolate" loading="lazy">
-                        <img src="img/crepas/duraznoconlecherachocolateychispasdechocolate.webp" class="slide" alt="Crepa de durazno con lechera, chocolate y chispas" loading="lazy">
-                    </div>
-                </div>
-            </section>
+        <!-- MENÚ DINÁMICO (Firebase) -->
+        <section id="menu-firebase" class="mf-seccion">
+          <div class="mf-encabezado">
+            <span class="mf-linea"></span>
+            <h2 class="mf-titulo">MENU</h2>
+            <span class="mf-linea"></span>
+          </div>
+          <div id="mf-grid" class="mf-grid">
+            <p id="mf-cargando" class="mf-cargando">Cargando carta…</p>
+          </div>
         </section>
 
                 <div id="promociones" class="espacio"></div>
         <h2>PROMOCIONES</h2>
         <section class="promociones">
-            <div class="cartadepromos">
-
-                <div class="promo-card promo-escolar">
-                    <div class="promo-info">
-                    <button class="info-icon" aria-label="Ver condiciones de la promoción">i</button>
-                    <div class="info-tooltip">
-                    Promoción válida de lunes a viernes de 2:00 pm a 6:00 pm.
-                    Exclusiva para estudiantes con credencial vigente.
-                    No acumulable con otras promociones.
-                    Sujeta a disponibilidad de insumos.
-                    </div>
-                </div>
-                <div class="promo-header promo-header-escolar">
-                    CLASE LIBRE
-                    <span class="promo-badge">Promoción Estudiantes</span>
-                </div>
-
-                <p class="promo-subtitle">
-                    Paquete disponible después del horario escolar
-                </p>
-                <p class="promo-vigencia">Válida durante 2026 · Sujeta a disponibilidad de producto</p>
-
-                <ul class="promo-items">
-                    <li>Rebanada de pizza peperoni ó hawaiana</li>
-                    <li>+</li>
-                    <li>Frappé Moka</li>
-                </ul>
-
-                <div class="promo-price">
-                    <span>Precio preferencial</span>
-                    <strong>$45</strong>
-                </div>
-
-                <p class="promo-footer">
-                    Presentar credencial de estudiante vigente · Personal e intransferible
-                </p>
-                </div>
-
-
-            </div>
+          <div class="promos-grid" id="promos-grid">
+            <p id="promos-cargando" style="color:#aaa;font-style:italic;">Cargando promociones…</p>
+          </div>
         </section>
 
         <div id="ubicacion" class="espacio"></div>
@@ -306,7 +173,208 @@
 </div>
 
 
+    <!-- Cartel abierto/cerrado -->
+    <div id="estado-local" class="estado-badge estado-cargando">
+      <span class="estado-punto"></span>
+      <span class="estado-txt">…</span>
+    </div>
+
     <script src="script.js"></script>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import { getFirestore, collection, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+      const app = initializeApp({
+        apiKey: "AIzaSyAsfkKZTgY-Q15bTgosJzmZucN6CksACRo",
+        authDomain: "aruma-cafe.firebaseapp.com",
+        projectId: "aruma-cafe",
+        storageBucket: "aruma-cafe.firebasestorage.app",
+        messagingSenderId: "1092150504121",
+        appId: "1:1092150504121:web:7f64f89fb87319118c8968"
+      });
+      const db = getFirestore(app);
+
+      function galeria() {
+        return `
+          <div class="mf-galeria-ph">
+            <svg class="mf-galeria-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+            <p>Galería próximamente</p>
+          </div>`;
+      }
+
+      const grid = document.getElementById("mf-grid");
+      const cargando = document.getElementById("mf-cargando");
+
+      // Almacena datos en memoria: { id, nombre, productos[] }
+      const datosSecciones = new Map();
+      // Guarda los unsubscribers de cada listener de productos
+      const productListeners = new Map();
+
+      function renderGrid() {
+        grid.innerHTML = "";
+
+        // Solo secciones activas, ordenadas por su campo orden
+        const secciones = [...datosSecciones.values()]
+          .filter(s => s.activo !== false)
+          .sort((a, b) => (a.orden ?? 0) - (b.orden ?? 0));
+
+        if (secciones.length === 0) {
+          grid.innerHTML = `<p class="mf-cargando">Sin secciones en el menú aún.</p>`;
+          return;
+        }
+
+        for (const sec of secciones) {
+          // Solo productos activos dentro de la sección activa
+          const productosVisibles = sec.productos.filter(p => p.activo !== false);
+
+          const itemsHTML = productosVisibles.length
+            ? productosVisibles.map(p => `
+                <li class="mf-item">
+                  <span class="mf-nombre">${p.nombre}</span>
+                  <span class="mf-puntos"></span>
+                  <span class="mf-precio">$${p.precio}</span>
+                </li>`).join("")
+            : `<li class="mf-item mf-vacio">Sin productos disponibles</li>`;
+
+          const colMenu = document.createElement("div");
+          colMenu.className = "mf-col mf-col-menu";
+          colMenu.innerHTML = `
+            <h3 class="mf-col-titulo">${sec.nombre}</h3>
+            <ul class="mf-lista">${itemsHTML}</ul>`;
+
+          const colGal = document.createElement("div");
+          colGal.className = "mf-col mf-col-galeria";
+          colGal.innerHTML = galeria();
+
+          grid.appendChild(colMenu);
+          grid.appendChild(colGal);
+        }
+      }
+
+      // ── Promociones dinámicas ─────────────────────────────────────────────
+      const promosGrid    = document.getElementById("promos-grid");
+      const promosCargando = document.getElementById("promos-cargando");
+
+      const TEMA_CLASES = {
+        escolar: "promo-tema-escolar",
+        clasico: "promo-tema-clasico",
+        verde:   "promo-tema-verde",
+        naranja: "promo-tema-naranja",
+      };
+
+      function renderPromo(promo) {
+        const temaClass = TEMA_CLASES[promo.tema] || "promo-tema-escolar";
+        const items     = (promo.items || []);
+        const itemsHTML = items.map((item, i) => {
+          if (item === "+") return `<li class="promo-sep">✦</li>`;
+          return `<li>${item}</li>`;
+        }).join("");
+
+        const tooltipTexto = promo.condiciones || "Sin condiciones especiales.";
+        const condiciones = `<div class="promo-info">
+               <button class="info-icon" aria-label="Ver condiciones">i</button>
+               <div class="info-tooltip">${tooltipTexto}</div>
+             </div>`;
+
+        const badge    = promo.badge    ? `<span class="promo-badge">${promo.badge}</span>` : "";
+        const subtitulo = promo.subtitulo ? `<p class="promo-subtitle">${promo.subtitulo}</p>` : "";
+        const vigencia  = promo.vigencia  ? `<p class="promo-vigencia">${promo.vigencia}</p>` : "";
+        const footer    = promo.footer    ? `<p class="promo-footer">${promo.footer}</p>` : "";
+        const precio    = promo.precio    ? `<strong>$${promo.precio}</strong>` : "";
+        const etiqueta  = promo.etiquetaPrecio || "Precio especial";
+
+        return `
+          <div class="promo-card ${temaClass}">
+            <div class="promo-header">
+              ${condiciones}
+              ${promo.titulo}
+              ${badge}
+            </div>
+            <div class="promo-body">
+              ${subtitulo}
+              ${vigencia}
+              ${items.length ? `<ul class="promo-items">${itemsHTML}</ul>` : ""}
+              ${promo.precio ? `<div class="promo-price"><span>${etiqueta}</span>${precio}</div>` : ""}
+              ${footer}
+            </div>
+          </div>`;
+      }
+
+      onSnapshot(collection(db, "promociones"), (snap) => {
+        if (promosCargando) promosCargando.remove();
+        const promos = snap.docs
+          .map(d => ({ id: d.id, ...d.data() }))
+          .filter(p => p.activo !== false)
+          .sort((a, b) => (a.orden ?? 0) - (b.orden ?? 0));
+
+        promosGrid.innerHTML = promos.length
+          ? promos.map(renderPromo).join("")
+          : `<p style="color:#aaa;font-style:italic;text-align:center;width:100%;">Sin promociones activas por el momento.</p>`;
+      });
+
+      // ── Cartel abierto / cerrado ──────────────────────────────────────────
+      const badge = document.getElementById("estado-local");
+      const punto = badge.querySelector(".estado-punto");
+      const txtEl = badge.querySelector(".estado-txt");
+
+      onSnapshot(doc(db, "config", "estado"), (snap) => {
+        const abierto = snap.exists() ? (snap.data().abierto ?? true) : true;
+        badge.className = "estado-badge " + (abierto ? "estado-abierto" : "estado-cerrado");
+        punto.textContent = "●";
+        txtEl.textContent = abierto ? "ABIERTO" : "CERRADO";
+      });
+
+      // Escucha cambios en secciones en tiempo real
+      onSnapshot(collection(db, "secciones"), (snap) => {
+        if (cargando) cargando.remove();
+
+        snap.docChanges().forEach(change => {
+          const id = change.doc.id;
+
+          if (change.type === "removed") {
+            // Cancela listener de productos y elimina de memoria
+            productListeners.get(id)?.();
+            productListeners.delete(id);
+            datosSecciones.delete(id);
+          } else {
+            // Agrega o actualiza sección
+            const existente = datosSecciones.get(id);
+            const data = change.doc.data();
+            datosSecciones.set(id, {
+              id,
+              nombre:   data.nombre,
+              activo:   data.activo ?? true,
+              orden:    data.orden  ?? 0,
+              productos: existente?.productos ?? [],
+            });
+
+            // Si no tiene listener de productos, créalo
+            if (!productListeners.has(id)) {
+              const unsub = onSnapshot(
+                collection(db, "secciones", id, "productos"),
+                (prodSnap) => {
+                  const productos = prodSnap.docs
+                    .map(d => ({ id: d.id, ...d.data() }))
+                    .sort((a, b) => (a.orden ?? 0) - (b.orden ?? 0));
+
+                  datosSecciones.set(id, { ...datosSecciones.get(id), productos });
+                  renderGrid();
+                }
+              );
+              productListeners.set(id, unsub);
+            }
+          }
+        });
+
+        renderGrid();
+      });
+    </script>
 </body>
 
 </html>

@@ -127,6 +127,12 @@ function toggleQuetzal() {
   document.getElementById("footerQuetzal").classList.toggle("active");
 }
 
-  function mpClose() {
-    document.getElementById('mpPop').style.display = 'none';
-  }
+function mpClose() {
+  document.getElementById('mpPop').style.display = 'none';
+}
+
+// Cierra el popup de tarjetas automáticamente después de 20 segundos
+setTimeout(() => {
+  const pop = document.getElementById('mpPop');
+  if (pop) pop.style.display = 'none';
+}, 20000);
