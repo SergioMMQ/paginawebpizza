@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "D'Aruma Cafe Admin",
+    "slug": "dac-admin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -20,10 +20,16 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.quetzal_mq.dacadmin"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d23ef692-375f-42e4-9749-a3039482cc19"
+      }
     }
   }
 }

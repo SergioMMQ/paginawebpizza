@@ -10,6 +10,10 @@ import LoginScreen         from "./screens/LoginScreen";
 import DashboardScreen     from "./screens/DashboardScreen";
 import MenuScreen          from "./screens/MenuScreen";
 import PromocionesScreen   from "./screens/PromocionesScreen";
+import TarjetasScreen      from "./screens/TarjetasScreen";
+import SolicitudesScreen   from "./screens/SolicitudesScreen";
+import OrdenesScreen       from "./screens/OrdenesScreen";
+import PerfilAdminScreen   from "./screens/PerfilAdminScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab   = createBottomTabNavigator();
@@ -25,7 +29,7 @@ const headerOpts = (cerrarSesion) => ({
   ),
 });
 
-function Tabs({ cerrarSesion }) {
+function Tabs({ cerrarSesion, usuario }) {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -66,6 +70,43 @@ function Tabs({ cerrarSesion }) {
           tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>🏷️</Text>,
         }}
       />
+      <Tab.Screen
+        name="Tarjetas"
+        component={TarjetasScreen}
+        options={{
+          title: "Tarjetas",
+          tabBarLabel: "Tarjetas",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>🎴</Text>,
+        }}
+      />
+      <Tab.Screen
+        name="Solicitudes"
+        component={SolicitudesScreen}
+        options={{
+          title: "Pedidos Eventos",
+          tabBarLabel: "Eventos",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>📦</Text>,
+        }}
+      />
+      <Tab.Screen
+        name="Ordenes"
+        component={OrdenesScreen}
+        options={{
+          title: "Órdenes en Tienda",
+          tabBarLabel: "Órdenes",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>🧾</Text>,
+        }}
+      />
+      <Tab.Screen
+        name="Perfil"
+        options={{
+          title: "Mi Perfil",
+          tabBarLabel: "Perfil",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>👤</Text>,
+        }}
+      >
+        {() => <PerfilAdminScreen usuario={usuario} />}
+      </Tab.Screen>
     </Tab.Navigator>
   );
 }
@@ -92,7 +133,7 @@ export default function App() {
         {!usuario
           ? <Stack.Screen name="Login" component={LoginScreen} />
           : <Stack.Screen name="Main">
-              {() => <Tabs cerrarSesion={cerrarSesion} />}
+              {() => <Tabs cerrarSesion={cerrarSesion} usuario={usuario} />}
             </Stack.Screen>
         }
       </Stack.Navigator>
