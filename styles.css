@@ -974,3 +974,58 @@ footer p {
     display: none;
   }
 }
+
+/* ── App descarga ─────────────────────────────────────────────────────────── */
+.app-descarga {
+  background: linear-gradient(135deg, #1a0a00 0%, #3b1a00 100%);
+  padding: 48px 24px;
+  text-align: center;
+  border-top: 2px solid #934807;
+  border-bottom: 2px solid #934807;
+  margin: 40px 0 0;
+}
+
+.app-descarga-contenido {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-descarga-texto h2 {
+  font-size: 1.8rem;
+  color: #f5c97a;
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+
+.app-descarga-texto p {
+  color: #c8a97a;
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.app-playstore-btn img {
+  height: 64px;
+  transition: transform 0.2s, opacity 0.2s;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+.app-playstore-btn:hover img {
+  transform: scale(1.06);
+  opacity: 0.9;
+}
+
+@media (max-width: 560px) {
+  .app-descarga-texto h2 {
+    font-size: 1.3rem;
+  }
+  .app-playstore-btn img {
+    height: 52px;
+  }
+}
+

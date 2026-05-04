@@ -28,8 +28,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "d23ef692-375f-42e4-9749-a3039482cc19"
+        "projectId": "a7c9c441-11ae-42c7-943a-8f73ad8af135"
       }
-    }
+    },
+    "owner": "quetzal_mq"
   }
 }
