@@ -64,7 +64,7 @@ function LoginView() {
 
   return (
     <ScrollView contentContainerStyle={lv.container} keyboardShouldPersistTaps="handled">
-      <Text style={lv.title}>D'Aruma Cafe</Text>
+      <Text style={lv.title}>D" Aruma Cafe</Text>
       <Text style={lv.sub}>
         {modo === "login" ? "Inicia sesión en tu cuenta" : "Crea tu cuenta gratis"}
       </Text>

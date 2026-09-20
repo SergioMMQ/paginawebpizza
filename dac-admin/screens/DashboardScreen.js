@@ -98,7 +98,7 @@ export default function DashboardScreen({ navigation }) {
       {/* Encabezado */}
       <View style={d.header}>
         <Text style={d.headerSub}>Panel de administración</Text>
-        <Text style={d.headerTitle}>D'Aruma Café</Text>
+        <Text style={d.headerTitle}>D" Aruma Café</Text>
       </View>
 
       {/* Botón ABIERTO / CERRADO */}

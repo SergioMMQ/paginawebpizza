@@ -1,17 +1,11 @@
 {
   "expo": {
-    "name": "D'Aruma Cafe Admin",
+    "name": "D\" Aruma Cafe Admin",
     "slug": "dac-admin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -20,7 +14,6 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
       "package": "com.quetzal_mq.dacadmin"
     },
     "web": {
@@ -31,6 +24,17 @@
         "projectId": "a7c9c441-11ae-42c7-943a-8f73ad8af135"
       }
     },
-    "owner": "quetzal_mq"
+    "owner": "quetzal_mq",
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ]
   }
 }

@@ -133,7 +133,7 @@ export default function MenuScreen({ usuario, onOrderPlaced }) {
         style={s.container}
         contentContainerStyle={{ paddingBottom: totalItems > 0 ? 100 : 40 }}
       >
-        <Text style={s.header}>D'Aruma Cafe</Text>
+        <Text style={s.header}>D" Aruma Cafe</Text>
 
         {secciones.map(sec => (
           <View key={sec.id} style={s.seccion}>

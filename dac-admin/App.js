@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
+import { enableScreens } from "react-native-screens";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -14,6 +15,8 @@ import TarjetasScreen      from "./screens/TarjetasScreen";
 import SolicitudesScreen   from "./screens/SolicitudesScreen";
 import OrdenesScreen       from "./screens/OrdenesScreen";
 import PerfilAdminScreen   from "./screens/PerfilAdminScreen";
+
+enableScreens(false);
 
 const Stack = createNativeStackNavigator();
 const Tab   = createBottomTabNavigator();

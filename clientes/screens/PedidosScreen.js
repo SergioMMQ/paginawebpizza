@@ -301,7 +301,7 @@ function BurbujaMensaje({ m, esCliente }) {
   return (
     <View style={[c.burbujaRow, esCliente ? c.burbujaRowDer : c.burbujaRowIzq]}>
       <View style={[c.burbuja, esCliente ? c.burbujaCliente : c.burbujaAdmin]}>
-        <Text style={c.burbujaLabel}>{esCliente ? "Tú" : "D'Aruma Cafe"}</Text>
+        <Text style={c.burbujaLabel}>{esCliente ? "Tú" : 'D" Aruma Cafe'}</Text>
         <Text style={[c.burbujaTxt, !esCliente && { color: "#fff" }]}>{m.texto}</Text>
       </View>
     </View>

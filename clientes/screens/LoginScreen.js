@@ -27,7 +27,7 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>D'Aruma Cafe</Text>
+      <Text style={styles.title}>D" Aruma Cafe</Text>
       <TextInput
         style={styles.input}
         placeholder="Correo"
