@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  window.addEventListener("scroll", updateActiveNav);
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
   updateActiveNav();
 
   /* ==============================
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  window.addEventListener("scroll", updateNavBrand);
+  window.addEventListener("scroll", updateNavBrand, { passive: true });
   updateNavBrand();
 
   /* ==============================
