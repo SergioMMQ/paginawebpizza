@@ -267,7 +267,10 @@
               tabsEl.querySelectorAll(".mf-tab").forEach(t => {
                 const isActive = t.dataset.id === secId;
                 t.classList.toggle("active", isActive);
-                if (isActive) t.scrollIntoView({ inline: "nearest", block: "nearest" });
+                if (isActive) {
+                  const left = t.offsetLeft - (tabsEl.offsetWidth - t.offsetWidth) / 2;
+                  tabsEl.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+                }
               });
             });
           },
